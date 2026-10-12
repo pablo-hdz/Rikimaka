@@ -527,12 +527,9 @@ Los elementos deben marcarse como completados únicamente después de haber sido
 
 ## 19. Equipo
 
-### Autor principal
-
-**Pablo Daniel Hernández Meléndez**
-* Colaborador 1
-* Colaborador 2
-* Colaborador 3
+* Colaborador 1 - **Pablo Daniel Hernández Meléndez**
+* Colaborador 2 - **Fiorella María Pérez López**
+* Colaborador 3 - **Mariana Cubero Sanchez**
 
 El proyecto se desarrolla mediante un modelo colaborativo utilizando Git y GitHub, con ramas independientes, commits descriptivos y Pull Requests para integración y revisión del código.
 

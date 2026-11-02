@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<!-- W00 · Bienvenida -->
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rikimaka centraliza las vacaciones, los reportes diarios y las estadísticas de gestión humana.">
+    <meta name="author" content="Equipo Rikimaka">
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <title>Bienvenida | Rikimaka</title>
+</head>
+
+<body class="inicio">
+
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="inicio-cabecera">
+        <div>
+            <a class="inicio-logo" href="index.html">RIKIMAKA</a>
+            <p>Gestión humana</p>
+        </div>
+
+        <nav class="inicio-menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="#funcionalidades">Funcionalidades</a></li>
+                <li><a href="#roles">Roles</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+                <li><a class="inicio-boton" href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+
+        <section class="inicio-hero" aria-labelledby="titulo-principal">
+            <!-- Los controles van antes de los videos: CSS los oculta al marcar la casilla -->
+            <input class="video-casilla" type="checkbox" id="detener-video">
+            <label class="video-etiqueta" for="detener-video">Detener video de fondo</label>
+
+            <!-- Videos decorativos sin sonido: CSS los alterna con una animación, sin JavaScript -->
+            <div class="inicio-videos">
+                <video class="inicio-video" autoplay muted loop playsinline aria-hidden="true">
+                    <source src="https://videos.pexels.com/video-files/6773475/6773475-sd_960_540_30fps.mp4" type="video/mp4">
+                </video>
+                <video class="inicio-video" autoplay muted loop playsinline aria-hidden="true">
+                    <source src="https://videos.pexels.com/video-files/7439139/7439139-sd_960_506_25fps.mp4" type="video/mp4">
+                </video>
+                <video class="inicio-video" autoplay muted loop playsinline aria-hidden="true">
+                    <source src="https://videos.pexels.com/video-files/7652002/7652002-sd_960_540_30fps.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="inicio-capa"></div>
+
+            <div class="inicio-hero-contenido">
+
+                <div>
+                    <p>+120 colaboradores · 35 proyectos</p>
+                    <h1 id="titulo-principal">Gestiona tu talento, proyectos y tiempo en un solo lugar</h1>
+                    <p>Vacaciones, reportes diarios y estadísticas para todo tu equipo.</p>
+                </div>
+
+                <!-- Acceso al sistema -->
+                <div class="inicio-acceso">
+                    <p class="mayusculas">Acceso</p>
+                    <h2>Bienvenido a Rikimaka</h2>
+
+                    <a class="inicio-boton inicio-ancho" href="login.html">Iniciar sesión</a>
+                    <a href="#roles">¿Qué puedo hacer en Rikimaka?</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="inicio-cifras" aria-label="Cifras de Rikimaka">
+            <div>
+                <span>+120</span>
+                <p class="mayusculas">Colaboradores</p>
+            </div>
+
+            <div>
+                <span>35</span>
+                <p class="mayusculas">Proyectos activos</p>
+            </div>
+
+            <div>
+                <span>98 %</span>
+                <p class="mayusculas">Reportes al día</p>
+            </div>
+        </section>
+
+        <div class="inicio-informacion">
+
+            <section id="roles" aria-labelledby="titulo-roles">
+                <div class="inicio-titulo-fila">
+                    <h2 class="mayusculas" id="titulo-roles">Roles del sistema</h2>
+                    <a href="#funcionalidades">Ver todas las funcionalidades</a>
+                </div>
+
+                <div class="inicio-roles">
+
+                    <article class="inicio-tarjeta">
+                        <img
+                            class="inicio-foto"
+                            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600"
+                            alt="Colaboradores trabajando en equipo">
+
+                        <h3 class="mayusculas">Colaborador</h3>
+                        <p>Solicita vacaciones y registra tu reporte diario de actividades.</p>
+                        <a class="inicio-boton inicio-secundario" href="login.html">Conocer más sobre el rol de colaborador</a>
+                    </article>
+
+                    <article class="inicio-tarjeta">
+                        <img
+                            class="inicio-foto"
+                            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600"
+                            alt="Profesionales participando en una reunión de trabajo">
+
+                        <h3 class="mayusculas">Talento humano</h3>
+                        <p>Aprueba solicitudes, define feriados y revisa estadísticas.</p>
+                        <a class="inicio-boton inicio-secundario" href="login.html">Conocer más sobre el rol de talento humano</a>
+                    </article>
+
+                    <article class="inicio-tarjeta">
+                        <img
+                            class="inicio-foto"
+                            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600"
+                            alt="Equipo trabajando con computadoras">
+
+                        <h3 class="mayusculas">Personal de TI</h3>
+                        <p>Administra el catálogo de proyectos y asigna colaboradores.</p>
+                        <a class="inicio-boton inicio-secundario" href="ayuda.html#personal-ti">Conocer más sobre el rol de TI</a>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="funcionalidades" aria-labelledby="titulo-beneficios">
+                <h2 class="mayusculas" id="titulo-beneficios">Beneficios</h2>
+
+                <ul class="inicio-beneficios">
+                    <li class="inicio-beneficio"><img class="icono" src="../assets/img/iconos/vacaciones.png" alt="" width="24" height="24"> Vacaciones sin papeleo</li>
+                    <li class="inicio-beneficio"><img class="icono" src="../assets/img/iconos/reloj.png" alt="" width="24" height="24"> Reportes en 2 minutos</li>
+                    <li class="inicio-beneficio"><img class="icono" src="../assets/img/iconos/feriado.png" alt="" width="24" height="24"> Feriados siempre visibles</li>
+                    <li class="inicio-beneficio"><img class="icono" src="../assets/img/iconos/estadisticas.png" alt="" width="24" height="24"> Estadísticas en tiempo real</li>
+                    <li class="inicio-beneficio"><img class="icono" src="../assets/img/iconos/accesibilidad.png" alt="" width="24" height="24"> Pensado para todas las personas</li>
+                    <li class="inicio-beneficio"><img class="icono" src="../assets/img/iconos/dispositivos.png" alt="" width="24" height="24"> Funciona en cualquier dispositivo</li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="inicio-pie">
+        <div>
+            <h2>RIKIMAKA</h2>
+            <p>© 2026 Rikimaka</p>
+        </div>
+
+        <div>
+            <h3 class="mayusculas">Sistema</h3>
+            <ul>
+                <li><a href="login.html">Iniciar sesión</a></li>
+                <li><a href="#funcionalidades">Funcionalidades</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="mayusculas">Ayuda</h3>
+            <ul>
+                <li><a href="ayuda.html#glosario">Glosario</a></li>
+                <li><a href="ayuda.html#mapa">Mapa del sitio</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="mayusculas">Accesibilidad</h3>
+            <ul>
+                <li><a href="ayuda.html#accesibilidad">Declaración de accesibilidad</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

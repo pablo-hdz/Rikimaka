@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- W08 · Gestión de feriados y períodos -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestión de los días feriados y de los períodos en que se permiten vacaciones.">
+    <meta name="author" content="Equipo Rikimaka">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <title>Calendario laboral | Rikimaka</title>
+</head>
+
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <div class="layout">
+
+        <aside class="lateral">
+            <a class="logo" href="index.html">RIKIMAKA</a>
+            <p class="sublogo">Gestión humana</p>
+            <p class="rol mayusculas">Talento humano</p>
+
+            <nav class="menu-lateral" aria-label="Menú de talento humano">
+                <ul>
+                    <li><a href="administrador.html"><img class="icono" src="../assets/img/iconos/inicio.png" alt="" width="24" height="24">Inicio</a></li>
+                    <li><a href="solicitudes.html"><img class="icono" src="../assets/img/iconos/solicitudes.png" alt="" width="24" height="24">Solicitudes · 5</a></li>
+                    <li><a class="activo" href="calendario.html" aria-current="page"><img class="icono" src="../assets/img/iconos/calendario.png" alt="" width="24" height="24">Calendario laboral</a></li>
+                    <li><a href="estadisticas.html"><img class="icono" src="../assets/img/iconos/estadisticas.png" alt="" width="24" height="24">Estadísticas</a></li>
+                    <li><a href="administrador.html#colaboradores"><img class="icono" src="../assets/img/iconos/colaboradores.png" alt="" width="24" height="24">Colaboradores</a></li>
+                    <li><a href="ayuda.html"><img class="icono" src="../assets/img/iconos/ayuda.png" alt="" width="24" height="24">Ayuda y glosario</a></li>
+                    <li><a href="login.html"><img class="icono" src="../assets/img/iconos/salir.png" alt="" width="24" height="24">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="area">
+
+            <header class="cabecera">
+                <nav class="migas" aria-label="Ruta de navegación">
+                    <a href="administrador.html">Inicio</a> ›
+                    <span aria-current="page">Calendario laboral</span>
+                </nav>
+
+                <div class="usuario">
+                    María Fernanda Ruiz
+                    <span>Administradora de talento humano</span>
+                </div>
+            </header>
+
+            <main class="contenido" id="contenido">
+
+                <p class="mensaje" id="fecha-guardada" role="status">Cambios guardados.</p>
+
+                <section aria-labelledby="calendario-titulo">
+                    <h1 class="mayusculas" id="calendario-titulo">Calendario laboral</h1>
+                    <p class="descripcion">Define los días feriados y los períodos en que se permiten vacaciones.</p>
+                </section>
+
+                <nav class="pestanas" aria-label="Secciones del calendario">
+                    <a class="pestana-activa" href="#feriados">Días feriados</a>
+                    <a href="#periodos">Períodos de vacaciones permitidos</a>
+                </nav>
+
+                <div class="dos-columnas">
+
+                    <section class="panel" id="feriados" aria-labelledby="feriados-titulo">
+                        <div class="entre">
+                            <h2 class="mayusculas" id="feriados-titulo">Feriados 2026 · 7 registrados</h2>
+                            <a class="boton" href="formulario-feriado.html">+ Agregar feriado</a>
+                        </div>
+
+                        <table>
+                            <caption>Días feriados registrados en 2026</caption>
+                            <thead>
+                            <tr>
+                                <th class="mayusculas" scope="col">Fecha</th>
+                                <th class="mayusculas" scope="col">Descripción</th>
+                                <th class="mayusculas" scope="col">Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1 ene. 2026</td><td>Año Nuevo</td><td><a href="formulario-feriado.html">Editar<span class="solo-lector"> Año Nuevo</span></a></td></tr>
+                                <tr><td>11 abr. 2026</td><td>Día de Juan Santamaría</td><td><a href="formulario-feriado.html">Editar<span class="solo-lector"> Día de Juan Santamaría</span></a></td></tr>
+                                <tr><td>25 jul. 2026</td><td>Anexión del Partido de Nicoya</td><td><a href="formulario-feriado.html">Editar<span class="solo-lector"> Anexión del Partido de Nicoya</span></a></td></tr>
+                                <tr><td>15 sep. 2026</td><td>Día de la Independencia</td><td><a href="formulario-feriado.html">Editar<span class="solo-lector"> Día de la Independencia</span></a></td></tr>
+                                <tr><td>12 oct. 2026</td><td>Día de las Culturas</td><td><a href="formulario-feriado.html">Editar<span class="solo-lector"> Día de las Culturas</span></a></td></tr>
+                                <tr><td>1 dic. 2026</td><td>Día de la Abolición del Ejército</td><td><a href="formulario-feriado.html">Editar<span class="solo-lector"> Día de la Abolición del Ejército</span></a></td></tr>
+                                <tr><td>25 dic. 2026</td><td>Navidad</td><td><a href="formulario-feriado.html">Editar<span class="solo-lector"> Navidad</span></a></td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="panel" id="periodos" aria-labelledby="periodos-titulo">
+                        <h2 class="mayusculas" id="periodos-titulo">Períodos permitidos</h2>
+
+                        <table>
+                            <caption>Períodos permitidos para vacaciones</caption>
+                            <thead>
+                            <tr>
+                                <th class="mayusculas" scope="col">Inicio</th>
+                                <th class="mayusculas" scope="col">Fin</th>
+                                <th class="mayusculas" scope="col">Descripción</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>15 oct.</td><td>31 oct.</td><td>Cierre Q3</td></tr>
+                                <tr><td>1 dic.</td><td>31 dic.</td><td>Fin de año</td></tr>
+                            </tbody>
+                        </table>
+
+                        <a class="boton secundario ancho" href="formulario-feriado.html#agregar-periodo">+ Agregar período</a>
+
+                        <h3>¿Cómo se usan?</h3>
+                        <p>Los feriados y períodos se muestran en el calendario de los colaboradores.</p>
+                    </section>
+
+                </div>
+
+            </main>
+
+            <footer class="pie-interno">
+                <p class="nota">© 2026 Rikimaka. Prototipo de clase con datos ilustrativos.</p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+</html>

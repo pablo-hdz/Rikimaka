@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- W03 · Solicitud y resumen -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicitud de vacaciones con calendario de feriados y períodos permitidos.">
+    <meta name="author" content="Equipo Rikimaka">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <title>Solicitar vacaciones | Rikimaka</title>
+</head>
+
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <div class="layout">
+
+        <aside class="lateral">
+            <a class="logo" href="index.html">RIKIMAKA</a>
+            <p class="sublogo">Gestión humana</p>
+            <p class="rol mayusculas">Colaborador</p>
+
+            <nav class="menu-lateral" aria-label="Menú de colaborador">
+                <ul>
+                    <li><a href="colaborador.html"><img class="icono" src="../assets/img/iconos/inicio.png" alt="" width="24" height="24">Inicio</a></li>
+                    <li><a class="activo" href="vacaciones.html" aria-current="page"><img class="icono" src="../assets/img/iconos/vacaciones.png" alt="" width="24" height="24">Vacaciones</a></li>
+                    <li><a href="reporte-diario.html"><img class="icono" src="../assets/img/iconos/reporte.png" alt="" width="24" height="24">Reportes diarios</a></li>
+                    <li><a href="colaborador.html#proyectos"><img class="icono" src="../assets/img/iconos/proyectos.png" alt="" width="24" height="24">Mis proyectos</a></li>
+                    <li><a href="colaborador.html#notificaciones"><img class="icono" src="../assets/img/iconos/notificaciones.png" alt="" width="24" height="24">Notificaciones</a></li>
+                    <li><a href="ayuda.html"><img class="icono" src="../assets/img/iconos/ayuda.png" alt="" width="24" height="24">Ayuda y glosario</a></li>
+                    <li><a href="login.html"><img class="icono" src="../assets/img/iconos/salir.png" alt="" width="24" height="24">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="area">
+
+            <header class="cabecera">
+                <nav class="migas" aria-label="Ruta de navegación">
+                    <a href="colaborador.html">Inicio</a> ›
+                    <span aria-current="page">Nueva solicitud de vacaciones</span>
+                </nav>
+
+                <div class="usuario">
+                    <a class="campana" href="colaborador.html#notificaciones"><img class="icono" src="../assets/img/iconos/notificaciones.png" alt="Ver notificaciones" width="24" height="24"></a>
+                    Camila Torres
+                    <span>Colaboradora · Desarrollo</span>
+                </div>
+            </header>
+
+            <main class="contenido" id="contenido">
+
+                <section aria-labelledby="solicitud-titulo">
+                    <h1 class="mayusculas" id="solicitud-titulo">Solicitar vacaciones</h1>
+                    <p class="descripcion">
+                        Selecciona el primer y el último día. Los fines de semana
+                        y feriados no se descuentan.
+                    </p>
+                </section>
+
+                <div class="dos-columnas">
+
+                    <section class="panel" aria-labelledby="calendario-titulo">
+
+                        <h2 class="mayusculas" id="calendario-titulo">Octubre 2026</h2>
+
+                        <table class="calendario">
+                            <caption>Días de octubre de 2026 con su estado. La leyenda explica cada símbolo.</caption>
+
+                            <thead>
+                                <tr>
+                                    <th scope="col">Lun</th>
+                                    <th scope="col">Mar</th>
+                                    <th scope="col">Mié</th>
+                                    <th scope="col">Jue</th>
+                                    <th scope="col">Vie</th>
+                                    <th scope="col">Sáb</th>
+                                    <th scope="col">Dom</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="vacio" colspan="3"></td>
+                                    <td class="no-disponible">1 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">No disponible</span></td>
+                                    <td class="no-disponible">2 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">No disponible</span></td>
+                                    <td class="fin-semana">3 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">Fin de semana</span></td>
+                                    <td class="fin-semana">4 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">Fin de semana</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="no-disponible">5 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">No disponible</span></td>
+                                    <td class="no-disponible">6 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">No disponible</span></td>
+                                    <td class="no-disponible">7 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">No disponible</span></td>
+                                    <td class="no-disponible">8 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">No disponible</span></td>
+                                    <td class="no-disponible">9 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">No disponible</span></td>
+                                    <td class="fin-semana">10 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">Fin de semana</span></td>
+                                    <td class="fin-semana">11 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">Fin de semana</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="feriado">12 <span class="simbolo" aria-hidden="true">▲</span><span class="solo-lector">Feriado</span></td>
+                                    <td class="no-disponible">13 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">No disponible</span></td>
+                                    <td class="no-disponible">14 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">No disponible</span></td>
+                                    <td class="periodo-permitido">15 <span class="simbolo" aria-hidden="true">✓</span><span class="solo-lector">Período permitido</span></td>
+                                    <td class="periodo-permitido">16 <span class="simbolo" aria-hidden="true">✓</span><span class="solo-lector">Período permitido</span></td>
+                                    <td class="fin-semana">17 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">Fin de semana</span></td>
+                                    <td class="fin-semana">18 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">Fin de semana</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="seleccionado">19 <span class="simbolo" aria-hidden="true">●</span><span class="solo-lector">Seleccionado</span></td>
+                                    <td class="seleccionado">20 <span class="simbolo" aria-hidden="true">●</span><span class="solo-lector">Seleccionado</span></td>
+                                    <td class="seleccionado">21 <span class="simbolo" aria-hidden="true">●</span><span class="solo-lector">Seleccionado</span></td>
+                                    <td class="seleccionado">22 <span class="simbolo" aria-hidden="true">●</span><span class="solo-lector">Seleccionado</span></td>
+                                    <td class="seleccionado">23 <span class="simbolo" aria-hidden="true">●</span><span class="solo-lector">Seleccionado</span></td>
+                                    <td class="fin-semana">24 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">Fin de semana</span></td>
+                                    <td class="fin-semana">25 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">Fin de semana</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="periodo-permitido">26 <span class="simbolo" aria-hidden="true">✓</span><span class="solo-lector">Período permitido</span></td>
+                                    <td class="periodo-permitido">27 <span class="simbolo" aria-hidden="true">✓</span><span class="solo-lector">Período permitido</span></td>
+                                    <td class="periodo-permitido">28 <span class="simbolo" aria-hidden="true">✓</span><span class="solo-lector">Período permitido</span></td>
+                                    <td class="periodo-permitido">29 <span class="simbolo" aria-hidden="true">✓</span><span class="solo-lector">Período permitido</span></td>
+                                    <td class="periodo-permitido">30 <span class="simbolo" aria-hidden="true">✓</span><span class="solo-lector">Período permitido</span></td>
+                                    <td class="fin-semana">31 <span class="simbolo" aria-hidden="true">—</span><span class="solo-lector">Fin de semana</span></td>
+                                    <td class="vacio"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <ul class="leyenda-calendario">
+                            <li><span class="simbolo" aria-hidden="true">▲</span> Feriado</li>
+                            <li><span class="simbolo" aria-hidden="true">✓</span> Período permitido</li>
+                            <li><span class="simbolo" aria-hidden="true">●</span> Seleccionado</li>
+                            <li><span class="simbolo" aria-hidden="true">—</span> No disponible o fin de semana</li>
+                        </ul>
+
+                    </section>
+
+                    <section class="panel" aria-labelledby="resumen-titulo">
+
+                        <h2 class="mayusculas" id="resumen-titulo">Resumen de la solicitud</h2>
+
+                        <form action="confirmar-vacaciones.html" method="get">
+
+                            <div class="grupo">
+                                <label for="inicio">Fecha de inicio</label>
+                                <input type="date" id="inicio" name="inicio" value="2026-10-19" min="2026-10-15" required>
+                            </div>
+
+                            <div class="grupo">
+                                <label for="fin">Fecha de fin</label>
+                                <input type="date" id="fin" name="fin" value="2026-10-23" min="2026-10-15" required>
+                                <p class="ayuda">Debe estar dentro de un período permitido.</p>
+                            </div>
+
+                            <table class="datos">
+                                <caption>Días de vacaciones de esta solicitud</caption>
+
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Días hábiles solicitados</th>
+                                        <td>5</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">Días disponibles</th>
+                                        <td>12</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">Días restantes</th>
+                                        <td>7</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="grupo">
+                                <label for="comentario">Comentario (opcional)</label>
+                                <textarea id="comentario" name="comentario" rows="4"></textarea>
+                                <p class="ayuda">Ej.: viaje familiar</p>
+                            </div>
+
+                            <button class="ancho" type="submit">Revisar solicitud</button>
+                            <a class="boton secundario ancho" href="colaborador.html">Cancelar</a>
+
+                        </form>
+
+                    </section>
+
+                </div>
+
+            </main>
+
+            <footer class="pie-interno">
+                <p class="nota">© 2026 Rikimaka. Prototipo de clase con datos ilustrativos.</p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+</html>

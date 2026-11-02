@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!-- W02 · Panel del colaborador -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panel del colaborador: vacaciones disponibles, horas, proyectos y notificaciones.">
+    <meta name="author" content="Equipo Rikimaka">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <title>Panel del colaborador | Rikimaka</title>
+</head>
+
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <!-- Casilla para abrir y cerrar el menú -->
+    <input type="checkbox" id="menu-colaborador" class="menu-casilla">
+
+    <div class="layout layout-colaborador">
+
+        <aside class="lateral">
+
+            <a class="logo" href="index.html">RIKIMAKA</a>
+            <p class="sublogo">Gestión humana</p>
+            <p class="rol mayusculas">Colaborador</p>
+
+            <nav class="menu-lateral" aria-label="Menú de colaborador">
+
+                <ul>
+                    <li>
+                        <a class="activo" href="colaborador.html" aria-current="page">
+                            <img class="icono" src="../assets/img/iconos/inicio.png" alt="" width="24" height="24">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="vacaciones.html">
+                            <img class="icono" src="../assets/img/iconos/vacaciones.png" alt="" width="24" height="24">
+                            Vacaciones
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="reporte-diario.html">
+                            <img class="icono" src="../assets/img/iconos/reporte.png" alt="" width="24" height="24">
+                            Reportes diarios
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="colaborador.html#proyectos">
+                            <img class="icono" src="../assets/img/iconos/proyectos.png" alt="" width="24" height="24">
+                            Mis proyectos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="colaborador.html#notificaciones">
+                            <img class="icono" src="../assets/img/iconos/notificaciones.png" alt="" width="24" height="24">
+                            Notificaciones
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="ayuda.html">
+                            <img class="icono" src="../assets/img/iconos/ayuda.png" alt="" width="24" height="24">
+                            Ayuda y glosario
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="login.html">
+                            <img class="icono" src="../assets/img/iconos/salir.png" alt="" width="24" height="24">
+                            Cerrar sesión
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </aside>
+
+        <div class="area">
+
+            <header class="cabecera cabecera-colaborador">
+
+                <!-- Botón e Inicio -->
+                <div class="cabecera-izquierda">
+
+                    <label for="menu-colaborador" class="boton-menu">
+                        &#9776;
+                    </label>
+
+                    <nav class="migas" aria-label="Ruta de navegación">
+                        <span aria-current="page">Inicio</span>
+                    </nav>
+
+                </div>
+
+                <!-- Campana y datos del usuario -->
+                <div class="usuario usuario-colaborador">
+
+                    <a class="campana" href="#notificaciones">
+                        <img class="icono"
+                             src="../assets/img/iconos/notificaciones.png"
+                             alt="Ver notificaciones"
+                             width="24"
+                             height="24">
+                    </a>
+
+                    <div class="usuario-datos">
+                        <p>Camila Torres</p>
+                        <span>Colaboradora · Desarrollo</span>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <main class="contenido" id="contenido">
+
+                <p class="mensaje" id="solicitud-enviada" role="status">
+                    Solicitud enviada. Te avisaremos cuando sea revisada.
+                </p>
+
+                <section aria-labelledby="saludo-titulo">
+
+                    <h1 class="mayusculas" id="saludo-titulo">Hola, Camila</h1>
+
+                    <p class="descripcion">Martes 13 de octubre de 2026</p>
+
+                    <p class="aviso">
+                        <img class="icono" src="../assets/img/iconos/advertencia.png" alt="" width="24" height="24">
+                        Aún no has registrado tu reporte de hoy.
+                    </p>
+
+                </section>
+
+                <section class="metricas" aria-label="Indicadores personales">
+
+                    <article class="metrica">
+                        <h2 class="mayusculas">Vacaciones disponibles</h2>
+                        <span class="valor">12 días</span>
+                        <p class="apoyo">Período 2026</p>
+                    </article>
+
+                    <article class="metrica">
+                        <h2 class="mayusculas">Horas esta semana</h2>
+                        <span class="valor">32 h</span>
+                        <p class="apoyo">de 40 h esperadas</p>
+                    </article>
+
+                    <article class="metrica">
+                        <h2 class="mayusculas">Proyectos asignados</h2>
+                        <span class="valor">3</span>
+                        <p class="apoyo">1 con entrega este mes</p>
+                    </article>
+
+                    <article class="metrica">
+                        <h2 class="mayusculas">Solicitudes pendientes</h2>
+                        <span class="valor">1</span>
+                        <p class="apoyo">19 al 23 de octubre</p>
+                    </article>
+
+                </section>
+
+                <section class="panel" aria-labelledby="accesos-titulo">
+
+                    <h2 class="mayusculas" id="accesos-titulo">Accesos rápidos</h2>
+
+                    <div class="iguales">
+
+                        <a class="boton grande" href="reporte-diario.html">
+                            Registrar reporte de hoy
+                        </a>
+
+                        <a class="boton secundario grande" href="vacaciones.html">
+                            Solicitar vacaciones
+                        </a>
+
+                    </div>
+
+                </section>
+
+                <div class="dos-columnas">
+
+                    <section class="panel" id="proyectos" aria-labelledby="proyectos-titulo">
+
+                        <div class="entre">
+
+                            <h2 class="mayusculas" id="proyectos-titulo">Mis proyectos</h2>
+
+                            <a class="historial-boton" href="historial.html">
+                                Ver historial de reportes
+                            </a>
+
+                        </div>
+
+                        <table>
+
+                            <caption>Proyectos asignados a la colaboradora</caption>
+
+                            <thead>
+                                <tr>
+                                    <th class="mayusculas" scope="col">Código</th>
+                                    <th class="mayusculas" scope="col">Proyecto</th>
+                                    <th class="mayusculas" scope="col">Mi rol</th>
+                                    <th class="mayusculas" scope="col">Horas este mes</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>PRJ-014</td>
+
+                                    <td>
+                                        Portal de clientes
+                                        <span class="dato-secundario">Fin: 30 nov.</span>
+                                    </td>
+
+                                    <td>Desarrolladora</td>
+                                    <td>48 h</td>
+                                </tr>
+
+                                <tr>
+                                    <td>PRJ-021</td>
+
+                                    <td>
+                                        App de inventario
+                                        <span class="dato-secundario">Fin: 15 dic.</span>
+                                    </td>
+
+                                    <td>Desarrolladora</td>
+                                    <td>22 h</td>
+                                </tr>
+
+                                <tr>
+                                    <td>PRJ-009</td>
+
+                                    <td>
+                                        Soporte interno
+                                        <span class="dato-secundario">Continuo</span>
+                                    </td>
+
+                                    <td>Apoyo</td>
+                                    <td>6 h</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </section>
+
+                    <section class="panel" id="notificaciones" aria-labelledby="notificaciones-titulo">
+
+                        <h2 class="mayusculas" id="notificaciones-titulo">
+                            Notificaciones
+                        </h2>
+
+                        <ul class="notificaciones">
+
+                            <li class="notificacion">
+                                <p>Tu solicitud fue recibida</p>
+                                <span class="apoyo">Hace 2 h</span>
+                            </li>
+
+                            <li class="notificacion">
+                                <p>Nuevo feriado: 1 de diciembre</p>
+                                <span class="apoyo">Ayer</span>
+                            </li>
+
+                            <li class="notificacion">
+                                <p>Asignada a PRJ-021</p>
+                                <span class="apoyo">9 oct.</span>
+                            </li>
+
+                            <li class="notificacion">
+                                <p>Recordatorio: registra tus horas de trabajo</p>
+                                <span class="apoyo">8 oct.</span>
+                            </li>
+
+                            <li class="notificacion">
+                                <p>Actualización de tus proyectos asignados</p>
+                                <span class="apoyo">7 oct.</span>
+                            </li>
+
+                        </ul>
+
+                    </section>
+
+                </div>
+
+            </main>
+
+            <footer class="pie-interno">
+                <p class="nota">
+                    © 2026 Rikimaka. Prototipo de clase con datos ilustrativos.
+                </p>
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

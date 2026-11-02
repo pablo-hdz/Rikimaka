@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- Ayuda, glosario, mapa del sitio y declaración de accesibilidad -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ayuda de Rikimaka: ingreso, glosario, mapa del sitio y declaración de accesibilidad.">
+    <meta name="author" content="Equipo Rikimaka">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <title>Ayuda y glosario | Rikimaka</title>
+</head>
+
+<body class="inicio">
+
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="inicio-cabecera">
+        <div>
+            <a class="inicio-logo" href="index.html">RIKIMAKA</a>
+            <p>Gestión humana</p>
+        </div>
+
+        <nav class="inicio-menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a class="inicio-boton" href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="inicio-informacion" id="contenido">
+
+        <h1>Ayuda y glosario</h1>
+
+        <section class="ayuda-seccion" id="ingreso" aria-labelledby="titulo-ingreso">
+            <h2 id="titulo-ingreso">Ayuda para ingresar</h2>
+            <p>
+                Este prototipo usa un ingreso simulado: elige tu perfil en la pantalla de
+                <a href="login.html">inicio de sesión</a>. No necesitas una contraseña real ni se guardan datos.
+            </p>
+        </section>
+
+        <section class="ayuda-seccion" id="glosario" aria-labelledby="titulo-glosario">
+            <h2 id="titulo-glosario">Glosario</h2>
+            <table>
+                <caption>Términos y abreviaturas usados en el sistema</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Término</th>
+                        <th scope="col">Significado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Días hábiles</td>
+                        <td>Días laborales. No incluyen fines de semana ni feriados.</td>
+                    </tr>
+                    <tr>
+                        <td>Feriado</td>
+                        <td>Día no laboral definido por talento humano en el calendario.</td>
+                    </tr>
+                    <tr>
+                        <td>Período permitido</td>
+                        <td>Rango de fechas en el que se pueden solicitar vacaciones.</td>
+                    </tr>
+                    <tr>
+                        <td>KPI</td>
+                        <td>Indicador clave de desempeño.</td>
+                    </tr>
+                    <tr>
+                        <td>TI</td>
+                        <td>Tecnologías de la información.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="ayuda-seccion" id="personal-ti" aria-labelledby="titulo-ti">
+            <h2 id="titulo-ti">Personal de TI</h2>
+            <p>
+                Este rol administra el catálogo de proyectos y asigna colaboradores.
+                Sus pantallas no forman parte de este avance del proyecto.
+            </p>
+        </section>
+
+        <section class="ayuda-seccion" id="mapa" aria-labelledby="titulo-mapa">
+            <h2 id="titulo-mapa">Mapa del sitio</h2>
+
+            <h3>Páginas públicas</h3>
+            <ul>
+                <li><a href="index.html">Bienvenida</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
+
+            <h3>Colaborador</h3>
+            <ul>
+                <li><a href="colaborador.html">Panel del colaborador</a></li>
+                <li><a href="vacaciones.html">Solicitar vacaciones</a></li>
+                <li><a href="reporte-diario.html">Reporte diario</a></li>
+                <li><a href="historial.html">Historial de reportes</a></li>
+            </ul>
+
+            <h3>Talento humano</h3>
+            <ul>
+                <li><a href="administrador.html">Panel administrativo</a></li>
+                <li><a href="solicitudes.html">Solicitudes de vacaciones</a></li>
+                <li><a href="calendario.html">Calendario laboral</a></li>
+                <li><a href="estadisticas.html">Estadísticas y reportes</a></li>
+            </ul>
+        </section>
+
+        <section class="ayuda-seccion" id="accesibilidad" aria-labelledby="titulo-accesibilidad">
+            <h2 id="titulo-accesibilidad">Declaración de accesibilidad</h2>
+            <p>
+                Rikimaka tiene como objetivo cumplir los criterios aplicables de las pautas WCAG 2.2 en nivel AAA.
+                Es un objetivo de diseño y no una certificación.
+            </p>
+            <p>
+                Este prototipo busca ofrecer texto con contraste de 7:1 o más, navegación con teclado,
+                foco visible y estados que no dependen solo del color.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="inicio-pie">
+        <div>
+            <h2>RIKIMAKA</h2>
+            <p>© 2026 Rikimaka</p>
+            <p>Íconos diseñados por <a href="https://www.flaticon.es/autores/magnific">Magnific</a> de <a href="https://www.flaticon.es/">www.flaticon.es</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

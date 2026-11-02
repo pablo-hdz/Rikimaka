@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- W01 · Ingreso simulado -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ingreso simulado al sistema Rikimaka para colaboradores y talento humano.">
+    <meta name="author" content="Equipo Rikimaka">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <title>Iniciar sesión | Rikimaka</title>
+</head>
+
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <main class="ingreso-layout">
+
+        <section class="ingreso-imagen" aria-labelledby="ingreso-frase">
+            <img
+                class="ingreso-foto"
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200"
+                alt="">
+            <div class="ingreso-capa"></div>
+
+            <a class="ingreso-volver" href="index.html">‹ Volver al inicio</a>
+
+            <div class="ingreso-mensaje">
+                <h1 id="ingreso-frase">Tu tiempo, bien organizado.</h1>
+                <p>Gestiona tus actividades, solicitudes y proyectos desde un solo lugar.</p>
+            </div>
+        </section>
+
+        <section class="ingreso-formulario" id="contenido" aria-labelledby="ingreso-titulo">
+
+            <header class="ingreso-encabezado">
+                <a class="logo" href="index.html">RIKIMAKA</a>
+                <p class="sublogo">Gestión humana</p>
+            </header>
+
+            <div class="ingreso-contenido">
+                <h2 class="mayusculas" id="ingreso-titulo">Iniciar sesión</h2>
+                <p>Ingresa con tu cuenta institucional. Este ingreso es simulado: no valida ni guarda tus datos.</p>
+
+                <form class="formulario-acceso">
+
+                    <div class="grupo">
+                        <label for="correo">Correo o identificación</label>
+                        <input type="text" id="correo" name="correo" autocomplete="username">
+                        <p class="ayuda">Ej.: nombre@rikimaka.com o 1-2345-6789</p>
+                    </div>
+
+                    <div class="grupo">
+                        <label for="clave">Contraseña</label>
+                        <input type="password" id="clave" name="clave" autocomplete="current-password">
+                    </div>
+
+                </form>
+
+                <div class="ingreso-enlaces">
+                    <a href="ayuda.html#ingreso">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <div class="ingreso-opciones">
+                    <p>Selecciona tu perfil de acceso</p>
+                    <a class="boton ancho" href="colaborador.html">Ingresar como colaborador</a>
+                    <a class="boton secundario ancho" href="administrador.html">Ingresar como administrador</a>
+                </div>
+
+                <footer class="ingreso-ayuda">
+                    <a href="ayuda.html#ingreso">¿Necesitas ayuda para ingresar?</a>
+                </footer>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

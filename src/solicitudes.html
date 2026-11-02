@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!-- W07 · Revisar solicitudes y W07b · Confirmar decisión -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revisión, aprobación y rechazo de las solicitudes de vacaciones.">
+    <meta name="author" content="Equipo Rikimaka">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <title>Solicitudes | Rikimaka</title>
+</head>
+
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <div class="layout">
+
+        <aside class="lateral">
+            <a class="logo" href="index.html">RIKIMAKA</a>
+            <p class="sublogo">Gestión humana</p>
+            <p class="rol mayusculas">Talento humano</p>
+
+            <nav class="menu-lateral" aria-label="Menú de talento humano">
+                <ul>
+                    <li><a href="administrador.html"><img class="icono" src="../assets/img/iconos/inicio.png" alt="" width="24" height="24">Inicio</a></li>
+                    <li><a class="activo" href="solicitudes.html" aria-current="page"><img class="icono" src="../assets/img/iconos/solicitudes.png" alt="" width="24" height="24">Solicitudes · 5</a></li>
+                    <li><a href="calendario.html"><img class="icono" src="../assets/img/iconos/calendario.png" alt="" width="24" height="24">Calendario laboral</a></li>
+                    <li><a href="estadisticas.html"><img class="icono" src="../assets/img/iconos/estadisticas.png" alt="" width="24" height="24">Estadísticas</a></li>
+                    <li><a href="administrador.html#colaboradores"><img class="icono" src="../assets/img/iconos/colaboradores.png" alt="" width="24" height="24">Colaboradores</a></li>
+                    <li><a href="ayuda.html"><img class="icono" src="../assets/img/iconos/ayuda.png" alt="" width="24" height="24">Ayuda y glosario</a></li>
+                    <li><a href="login.html"><img class="icono" src="../assets/img/iconos/salir.png" alt="" width="24" height="24">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="area">
+
+            <header class="cabecera">
+                <nav class="migas" aria-label="Ruta de navegación">
+                    <a href="administrador.html">Inicio</a> ›
+                    <span aria-current="page">Solicitudes</span>
+                </nav>
+
+                <div class="usuario">
+                    María Fernanda Ruiz
+                    <span>Administradora de talento humano</span>
+                </div>
+            </header>
+
+            <main class="contenido" id="contenido">
+
+                <p class="mensaje" id="solicitud-aprobada" role="status">Solicitud aprobada.</p>
+                <p class="mensaje" id="solicitud-rechazada" role="status">Solicitud rechazada.</p>
+
+                <h1 class="mayusculas">Solicitudes de vacaciones</h1>
+
+                <nav class="pestanas" aria-label="Solicitudes por estado">
+                    <a class="pestana-activa" href="#pendientes-titulo">Pendientes (5)</a>
+                    <a href="#aprobadas">Aprobadas</a>
+                    <a href="#rechazadas">Rechazadas</a>
+                </nav>
+
+                <div class="solicitudes-columnas">
+
+                    <div>
+                        <section class="panel" aria-labelledby="pendientes-titulo">
+                            <h2 class="mayusculas" id="pendientes-titulo">Solicitudes pendientes</h2>
+
+                            <table>
+                                <caption>Solicitudes de vacaciones pendientes</caption>
+                                <thead>
+                                <tr>
+                                    <th class="mayusculas" scope="col">Colaborador</th>
+                                    <th class="mayusculas" scope="col">Inicio</th>
+                                    <th class="mayusculas" scope="col">Fin</th>
+                                    <th class="mayusculas" scope="col">Días</th>
+                                    <th class="mayusculas" scope="col">Estado</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Camila Torres
+                                            <span class="dato-secundario">Desarrollo</span>
+                                            <a href="#solicitud0">Ver detalle<span class="solo-lector"> de Camila Torres</span></a>
+                                        </td>
+                                        <td>19 oct.</td>
+                                        <td>23 oct.</td>
+                                        <td>5</td>
+                                        <td>○ Pendiente</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Andrés Méndez
+                                            <span class="dato-secundario">Soporte</span>
+                                            <a href="#solicitud1">Ver detalle<span class="solo-lector"> de Andrés Méndez</span></a>
+                                        </td>
+                                        <td>2 nov.</td>
+                                        <td>6 nov.</td>
+                                        <td>5</td>
+                                        <td>○ Pendiente</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Laura Rojas
+                                            <span class="dato-secundario">Diseño</span>
+                                            <a href="#solicitud2">Ver detalle<span class="solo-lector"> de Laura Rojas</span></a>
+                                        </td>
+                                        <td>26 oct.</td>
+                                        <td>27 oct.</td>
+                                        <td>2</td>
+                                        <td>○ Pendiente</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Diego Vargas
+                                            <span class="dato-secundario">Desarrollo</span>
+                                            <a href="#solicitud3">Ver detalle<span class="solo-lector"> de Diego Vargas</span></a>
+                                        </td>
+                                        <td>16 nov.</td>
+                                        <td>20 nov.</td>
+                                        <td>5</td>
+                                        <td>○ Pendiente</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Sofía Jiménez
+                                            <span class="dato-secundario">Finanzas</span>
+                                            <a href="#solicitud4">Ver detalle<span class="solo-lector"> de Sofía Jiménez</span></a>
+                                        </td>
+                                        <td>9 nov.</td>
+                                        <td>10 nov.</td>
+                                        <td>2</td>
+                                        <td>○ Pendiente</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="panel" id="aprobadas" aria-labelledby="aprobadas-titulo">
+                            <h2 class="mayusculas" id="aprobadas-titulo">Solicitudes aprobadas</h2>
+
+                            <table>
+                                <caption>Solicitudes de vacaciones aprobadas</caption>
+                                <thead>
+                                <tr>
+                                    <th class="mayusculas" scope="col">Colaborador</th>
+                                    <th class="mayusculas" scope="col">Inicio</th>
+                                    <th class="mayusculas" scope="col">Fin</th>
+                                    <th class="mayusculas" scope="col">Días</th>
+                                    <th class="mayusculas" scope="col">Estado</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Marco Solís<span class="dato-secundario">Soporte</span></td><td>5 oct.</td><td>9 oct.</td><td>5</td><td>● Aprobada</td></tr>
+                                    <tr><td>Elena Mora<span class="dato-secundario">Diseño</span></td><td>21 sep.</td><td>22 sep.</td><td>2</td><td>● Aprobada</td></tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="panel" id="rechazadas" aria-labelledby="rechazadas-titulo">
+                            <h2 class="mayusculas" id="rechazadas-titulo">Solicitudes rechazadas</h2>
+
+                            <table>
+                                <caption>Solicitudes de vacaciones rechazadas</caption>
+                                <thead>
+                                <tr>
+                                    <th class="mayusculas" scope="col">Colaborador</th>
+                                    <th class="mayusculas" scope="col">Inicio</th>
+                                    <th class="mayusculas" scope="col">Fin</th>
+                                    <th class="mayusculas" scope="col">Días</th>
+                                    <th class="mayusculas" scope="col">Estado</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Javier Brenes<span class="dato-secundario">Finanzas</span></td><td>28 sep.</td><td>30 sep.</td><td>3</td><td>⊘ Rechazada</td></tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+
+                    <div>
+
+                        <article class="panel" id="solicitud0" aria-labelledby="solicitud0-titulo">
+                            <h2 class="mayusculas" id="solicitud0-titulo">Detalle de la solicitud</h2>
+
+                            <table class="datos">
+                                <caption>Datos de la solicitud de Camila Torres</caption>
+                                <tbody>
+                                    <tr><th scope="row">Colaborador</th><td>Camila Torres · Desarrollo</td></tr>
+                                    <tr><th scope="row">Fechas</th><td>19 oct. al 23 oct.</td></tr>
+                                    <tr><th scope="row">Días hábiles / saldo</th><td>5 de 12 disponibles</td></tr>
+                                    <tr><th scope="row">Comentario</th><td>Viaje familiar</td></tr>
+                                </tbody>
+                            </table>
+
+                        <p class="aviso"><img class="icono" src="../assets/img/iconos/advertencia.png" alt="" width="24" height="24"> 2 personas del mismo equipo estarán de vacaciones en esas fechas.</p>
+
+                            <form>
+                                <div class="grupo">
+                                    <label for="comentario0">Comentario para el colaborador</label>
+                                    <textarea id="comentario0" name="comentario" rows="4"></textarea>
+                                    <p class="ayuda">Obligatorio si rechazas la solicitud.</p>
+                                </div>
+                            </form>
+
+                            <div class="fila">
+                                <a class="boton" href="#aprobar0">Aprobar<span class="solo-lector"> solicitud de Camila Torres</span></a>
+                                <a class="boton secundario" href="#rechazar0">Rechazar<span class="solo-lector"> solicitud de Camila Torres</span></a>
+                            </div>
+
+                            <!-- W07b: confirmación de la decisión. Se muestra al llegar por su enlace (:target). -->
+                            <section class="decision" id="aprobar0" aria-labelledby="aprobar0-titulo">
+                                <h3 class="mayusculas" id="aprobar0-titulo">¿Aprobar la solicitud?</h3>
+                                <p>Vas a aprobar la solicitud de Camila Torres del 19 oct. al 23 oct. (5 días hábiles). Su saldo quedará en 7 días y se le notificará.</p>
+                                <div class="fila">
+                                    <a class="boton" href="#solicitud-aprobada">Confirmar aprobación</a>
+                                    <a class="boton secundario" href="#solicitud0">Cancelar</a>
+                                </div>
+                            </section>
+
+                            <section class="decision" id="rechazar0" aria-labelledby="rechazar0-titulo">
+                                <h3 class="mayusculas" id="rechazar0-titulo">¿Rechazar la solicitud?</h3>
+                                <p>Vas a rechazar la solicitud de Camila Torres del 19 oct. al 23 oct.. Su saldo no cambiará y se le notificará.</p>
+                                <div class="fila">
+                                    <a class="boton" href="#solicitud-rechazada">Confirmar rechazo</a>
+                                    <a class="boton secundario" href="#solicitud0">Cancelar</a>
+                                </div>
+                            </section>
+                        </article>
+
+                        <article class="panel" id="solicitud1" aria-labelledby="solicitud1-titulo">
+                            <h2 class="mayusculas" id="solicitud1-titulo">Detalle de la solicitud</h2>
+
+                            <table class="datos">
+                                <caption>Datos de la solicitud de Andrés Méndez</caption>
+                                <tbody>
+                                    <tr><th scope="row">Colaborador</th><td>Andrés Méndez · Soporte</td></tr>
+                                    <tr><th scope="row">Fechas</th><td>2 nov. al 6 nov.</td></tr>
+                                    <tr><th scope="row">Días hábiles / saldo</th><td>5 de 12 disponibles</td></tr>
+                                    <tr><th scope="row">Comentario</th><td>Asunto familiar</td></tr>
+                                </tbody>
+                            </table>
+
+
+                            <form>
+                                <div class="grupo">
+                                    <label for="comentario1">Comentario para el colaborador</label>
+                                    <textarea id="comentario1" name="comentario" rows="4"></textarea>
+                                    <p class="ayuda">Obligatorio si rechazas la solicitud.</p>
+                                </div>
+                            </form>
+
+                            <div class="fila">
+                                <a class="boton" href="#aprobar1">Aprobar<span class="solo-lector"> solicitud de Andrés Méndez</span></a>
+                                <a class="boton secundario" href="#rechazar1">Rechazar<span class="solo-lector"> solicitud de Andrés Méndez</span></a>
+                            </div>
+
+                            <!-- W07b: confirmación de la decisión. Se muestra al llegar por su enlace (:target). -->
+                            <section class="decision" id="aprobar1" aria-labelledby="aprobar1-titulo">
+                                <h3 class="mayusculas" id="aprobar1-titulo">¿Aprobar la solicitud?</h3>
+                                <p>Vas a aprobar la solicitud de Andrés Méndez del 2 nov. al 6 nov. (5 días hábiles). Su saldo quedará en 7 días y se le notificará.</p>
+                                <div class="fila">
+                                    <a class="boton" href="#solicitud-aprobada">Confirmar aprobación</a>
+                                    <a class="boton secundario" href="#solicitud1">Cancelar</a>
+                                </div>
+                            </section>
+
+                            <section class="decision" id="rechazar1" aria-labelledby="rechazar1-titulo">
+                                <h3 class="mayusculas" id="rechazar1-titulo">¿Rechazar la solicitud?</h3>
+                                <p>Vas a rechazar la solicitud de Andrés Méndez del 2 nov. al 6 nov.. Su saldo no cambiará y se le notificará.</p>
+                                <div class="fila">
+                                    <a class="boton" href="#solicitud-rechazada">Confirmar rechazo</a>
+                                    <a class="boton secundario" href="#solicitud1">Cancelar</a>
+                                </div>
+                            </section>
+                        </article>
+
+                        <article class="panel" id="solicitud2" aria-labelledby="solicitud2-titulo">
+                            <h2 class="mayusculas" id="solicitud2-titulo">Detalle de la solicitud</h2>
+
+                            <table class="datos">
+                                <caption>Datos de la solicitud de Laura Rojas</caption>
+                                <tbody>
+                                    <tr><th scope="row">Colaborador</th><td>Laura Rojas · Diseño</td></tr>
+                                    <tr><th scope="row">Fechas</th><td>26 oct. al 27 oct.</td></tr>
+                                    <tr><th scope="row">Días hábiles / saldo</th><td>2 de 12 disponibles</td></tr>
+                                    <tr><th scope="row">Comentario</th><td>Trámite personal</td></tr>
+                                </tbody>
+                            </table>
+
+
+                            <form>
+                                <div class="grupo">
+                                    <label for="comentario2">Comentario para el colaborador</label>
+                                    <textarea id="comentario2" name="comentario" rows="4"></textarea>
+                                    <p class="ayuda">Obligatorio si rechazas la solicitud.</p>
+                                </div>
+                            </form>
+
+                            <div class="fila">
+                                <a class="boton" href="#aprobar2">Aprobar<span class="solo-lector"> solicitud de Laura Rojas</span></a>
+                                <a class="boton secundario" href="#rechazar2">Rechazar<span class="solo-lector"> solicitud de Laura Rojas</span></a>
+                            </div>
+
+                            <!-- W07b: confirmación de la decisión. Se muestra al llegar por su enlace (:target). -->
+                            <section class="decision" id="aprobar2" aria-labelledby="aprobar2-titulo">
+                                <h3 class="mayusculas" id="aprobar2-titulo">¿Aprobar la solicitud?</h3>
+                                <p>Vas a aprobar la solicitud de Laura Rojas del 26 oct. al 27 oct. (2 días hábiles). Su saldo quedará en 10 días y se le notificará.</p>
+                                <div class="fila">
+                                    <a class="boton" href="#solicitud-aprobada">Confirmar aprobación</a>
+                                    <a class="boton secundario" href="#solicitud2">Cancelar</a>
+                                </div>
+                            </section>
+
+                            <section class="decision" id="rechazar2" aria-labelledby="rechazar2-titulo">
+                                <h3 class="mayusculas" id="rechazar2-titulo">¿Rechazar la solicitud?</h3>
+                                <p>Vas a rechazar la solicitud de Laura Rojas del 26 oct. al 27 oct.. Su saldo no cambiará y se le notificará.</p>
+                                <div class="fila">
+                                    <a class="boton" href="#solicitud-rechazada">Confirmar rechazo</a>
+                                    <a class="boton secundario" href="#solicitud2">Cancelar</a>
+                                </div>
+                            </section>
+                        </article>
+
+                        <article class="panel" id="solicitud3" aria-labelledby="solicitud3-titulo">
+                            <h2 class="mayusculas" id="solicitud3-titulo">Detalle de la solicitud</h2>
+
+                            <table class="datos">
+                                <caption>Datos de la solicitud de Diego Vargas</caption>
+                                <tbody>
+                                    <tr><th scope="row">Colaborador</th><td>Diego Vargas · Desarrollo</td></tr>
+                                    <tr><th scope="row">Fechas</th><td>16 nov. al 20 nov.</td></tr>
+                                    <tr><th scope="row">Días hábiles / saldo</th><td>5 de 12 disponibles</td></tr>
+                                    <tr><th scope="row">Comentario</th><td>Viaje familiar</td></tr>
+                                </tbody>
+                            </table>
+
+
+                            <form>
+                                <div class="grupo">
+                                    <label for="comentario3">Comentario para el colaborador</label>
+                                    <textarea id="comentario3" name="comentario" rows="4"></textarea>
+                                    <p class="ayuda">Obligatorio si rechazas la solicitud.</p>
+                                </div>
+                            </form>
+
+                            <div class="fila">
+                                <a class="boton" href="#aprobar3">Aprobar<span class="solo-lector"> solicitud de Diego Vargas</span></a>
+                                <a class="boton secundario" href="#rechazar3">Rechazar<span class="solo-lector"> solicitud de Diego Vargas</span></a>
+                            </div>
+
+                            <!-- W07b: confirmación de la decisión. Se muestra al llegar por su enlace (:target). -->
+                            <section class="decision" id="aprobar3" aria-labelledby="aprobar3-titulo">
+                                <h3 class="mayusculas" id="aprobar3-titulo">¿Aprobar la solicitud?</h3>
+                                <p>Vas a aprobar la solicitud de Diego Vargas del 16 nov. al 20 nov. (5 días hábiles). Su saldo quedará en 7 días y se le notificará.</p>
+                                <div class="fila">
+                                    <a class="boton" href="#solicitud-aprobada">Confirmar aprobación</a>
+                                    <a class="boton secundario" href="#solicitud3">Cancelar</a>
+                                </div>
+                            </section>
+
+                            <section class="decision" id="rechazar3" aria-labelledby="rechazar3-titulo">
+                                <h3 class="mayusculas" id="rechazar3-titulo">¿Rechazar la solicitud?</h3>
+                                <p>Vas a rechazar la solicitud de Diego Vargas del 16 nov. al 20 nov.. Su saldo no cambiará y se le notificará.</p>
+                                <div class="fila">
+                                    <a class="boton" href="#solicitud-rechazada">Confirmar rechazo</a>
+                                    <a class="boton secundario" href="#solicitud3">Cancelar</a>
+                                </div>
+                            </section>
+                        </article>
+
+                        <article class="panel" id="solicitud4" aria-labelledby="solicitud4-titulo">
+                            <h2 class="mayusculas" id="solicitud4-titulo">Detalle de la solicitud</h2>
+
+                            <table class="datos">
+                                <caption>Datos de la solicitud de Sofía Jiménez</caption>
+                                <tbody>
+                                    <tr><th scope="row">Colaborador</th><td>Sofía Jiménez · Finanzas</td></tr>
+                                    <tr><th scope="row">Fechas</th><td>9 nov. al 10 nov.</td></tr>
+                                    <tr><th scope="row">Días hábiles / saldo</th><td>2 de 12 disponibles</td></tr>
+                                    <tr><th scope="row">Comentario</th><td>Trámite personal</td></tr>
+                                </tbody>
+                            </table>
+
+
+                            <form>
+                                <div class="grupo">
+                                    <label for="comentario4">Comentario para el colaborador</label>
+                                    <textarea id="comentario4" name="comentario" rows="4"></textarea>
+                                    <p class="ayuda">Obligatorio si rechazas la solicitud.</p>
+                                </div>
+                            </form>
+
+                            <div class="fila">
+                                <a class="boton" href="#aprobar4">Aprobar<span class="solo-lector"> solicitud de Sofía Jiménez</span></a>
+                                <a class="boton secundario" href="#rechazar4">Rechazar<span class="solo-lector"> solicitud de Sofía Jiménez</span></a>
+                            </div>
+
+                            <!-- W07b: confirmación de la decisión. Se muestra al llegar por su enlace (:target). -->
+                            <section class="decision" id="aprobar4" aria-labelledby="aprobar4-titulo">
+                                <h3 class="mayusculas" id="aprobar4-titulo">¿Aprobar la solicitud?</h3>
+                                <p>Vas a aprobar la solicitud de Sofía Jiménez del 9 nov. al 10 nov. (2 días hábiles). Su saldo quedará en 10 días y se le notificará.</p>
+                                <div class="fila">
+                                    <a class="boton" href="#solicitud-aprobada">Confirmar aprobación</a>
+                                    <a class="boton secundario" href="#solicitud4">Cancelar</a>
+                                </div>
+                            </section>
+
+                            <section class="decision" id="rechazar4" aria-labelledby="rechazar4-titulo">
+                                <h3 class="mayusculas" id="rechazar4-titulo">¿Rechazar la solicitud?</h3>
+                                <p>Vas a rechazar la solicitud de Sofía Jiménez del 9 nov. al 10 nov.. Su saldo no cambiará y se le notificará.</p>
+                                <div class="fila">
+                                    <a class="boton" href="#solicitud-rechazada">Confirmar rechazo</a>
+                                    <a class="boton secundario" href="#solicitud4">Cancelar</a>
+                                </div>
+                            </section>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+            <footer class="pie-interno">
+                <p class="nota">© 2026 Rikimaka. Prototipo de clase con datos ilustrativos.</p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- W09 · Estadísticas y reportes -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eficiencia por proyecto, carga de trabajo y productividad del personal.">
+    <meta name="author" content="Equipo Rikimaka">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <title>Estadísticas | Rikimaka</title>
+</head>
+
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <div class="layout">
+
+        <aside class="lateral">
+            <a class="logo" href="index.html">RIKIMAKA</a>
+            <p class="sublogo">Gestión humana</p>
+            <p class="rol mayusculas">Talento humano</p>
+
+            <nav class="menu-lateral" aria-label="Menú de talento humano">
+                <ul>
+                    <li><a href="administrador.html"><img class="icono" src="../assets/img/iconos/inicio.png" alt="" width="24" height="24">Inicio</a></li>
+                    <li><a href="solicitudes.html"><img class="icono" src="../assets/img/iconos/solicitudes.png" alt="" width="24" height="24">Solicitudes · 5</a></li>
+                    <li><a href="calendario.html"><img class="icono" src="../assets/img/iconos/calendario.png" alt="" width="24" height="24">Calendario laboral</a></li>
+                    <li><a class="activo" href="estadisticas.html" aria-current="page"><img class="icono" src="../assets/img/iconos/estadisticas.png" alt="" width="24" height="24">Estadísticas</a></li>
+                    <li><a href="administrador.html#colaboradores"><img class="icono" src="../assets/img/iconos/colaboradores.png" alt="" width="24" height="24">Colaboradores</a></li>
+                    <li><a href="ayuda.html"><img class="icono" src="../assets/img/iconos/ayuda.png" alt="" width="24" height="24">Ayuda y glosario</a></li>
+                    <li><a href="login.html"><img class="icono" src="../assets/img/iconos/salir.png" alt="" width="24" height="24">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="area">
+
+            <header class="cabecera">
+                <nav class="migas" aria-label="Ruta de navegación">
+                    <a href="administrador.html">Inicio</a> ›
+                    <span aria-current="page">Estadísticas</span>
+                </nav>
+
+                <div class="usuario">
+                    María Fernanda Ruiz
+                    <span>Administradora de talento humano</span>
+                </div>
+            </header>
+
+            <main class="contenido" id="contenido">
+
+                <section class="entre" aria-labelledby="estadisticas-titulo">
+                    <div>
+                        <h1 class="mayusculas" id="estadisticas-titulo">Estadísticas y reportes</h1>
+                        <p class="descripcion">Eficiencia, carga de trabajo y productividad del personal.</p>
+                    </div>
+                    <button type="button" class="secundario" disabled>Exportar reporte</button>
+                </section>
+
+                <section class="panel" aria-labelledby="filtros-titulo">
+                    <h2 class="mayusculas" id="filtros-titulo">Filtros</h2>
+
+                    <form action="estadisticas.html" method="get">
+                        <div class="iguales">
+                            <div class="grupo">
+                                <label for="periodo">Período</label>
+                                <select id="periodo" name="periodo">
+                                    <option>Octubre 2026</option>
+                                    <option>Septiembre 2026</option>
+                                </select>
+                            </div>
+                            <div class="grupo">
+                                <label for="proyecto">Proyecto</label>
+                                <select id="proyecto" name="proyecto">
+                                    <option>Todos los proyectos</option>
+                                    <option>PRJ-014</option>
+                                    <option>PRJ-021</option>
+                                    <option>PRJ-009</option>
+                                    <option>PRJ-030</option>
+                                    <option>PRJ-018</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit">Aplicar filtros</button>
+                    </form>
+
+                    <p class="nota">La exportación del reporte no está disponible en este prototipo.</p>
+                </section>
+
+                <p class="aviso"><img class="icono" src="../assets/img/iconos/advertencia.png" alt="" width="24" height="24"> En resumen: 3 proyectos superan su presupuesto de horas y el equipo de Desarrollo tiene la carga más alta.</p>
+
+                <section class="panel" id="eficiencia" aria-labelledby="eficiencia-titulo">
+                    <h2 class="mayusculas" id="eficiencia-titulo">Eficiencia por proyecto</h2>
+
+                    <div class="grafico-tabla">
+
+                        <div>
+                            <div class="grafico">
+                                <div class="fila-barra">
+                                    <span>PRJ-014</span>
+                                    <div class="pista"><div class="barra b90"></div></div>
+                                    <span>452 h</span>
+                                </div>
+                                <div class="fila-barra">
+                                    <span>PRJ-021</span>
+                                    <div class="pista"><div class="barra b42"></div></div>
+                                    <span>210 h</span>
+                                </div>
+                                <div class="fila-barra">
+                                    <span>PRJ-009</span>
+                                    <div class="pista"><div class="barra b48"></div></div>
+                                    <span>238 h</span>
+                                </div>
+                                <div class="fila-barra">
+                                    <span>PRJ-030</span>
+                                    <div class="pista"><div class="barra b52"></div></div>
+                                    <span>260 h</span>
+                                </div>
+                                <div class="fila-barra">
+                                    <span>PRJ-018</span>
+                                    <div class="pista"><div class="barra b62"></div></div>
+                                    <span>310 h</span>
+                                </div>
+                            </div>
+                            <p class="nota">Horas reales sobre una escala de 500 h.</p>
+                        </div>
+
+                        <table>
+                            <caption>Horas presupuestadas y reales por proyecto</caption>
+                            <thead>
+                            <tr>
+                                <th class="mayusculas" scope="col">Proyecto</th>
+                                <th class="mayusculas" scope="col">Horas presupuestadas</th>
+                                <th class="mayusculas" scope="col">Horas reales</th>
+                                <th class="mayusculas" scope="col">% de uso</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>PRJ-014 Portal</td><td>400</td><td>452</td><td>⚠ 113 % (excedido)</td></tr>
+                                <tr><td>PRJ-021 Inventario</td><td>300</td><td>210</td><td>70 %</td></tr>
+                                <tr><td>PRJ-009 Soporte</td><td>200</td><td>238</td><td>⚠ 119 % (excedido)</td></tr>
+                                <tr><td>PRJ-030 Intranet</td><td>250</td><td>260</td><td>⚠ 104 % (excedido)</td></tr>
+                                <tr><td>PRJ-018 Migración</td><td>500</td><td>310</td><td>62 %</td></tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </section>
+
+                <section class="panel" aria-labelledby="carga-titulo">
+                    <h2 class="mayusculas" id="carga-titulo">Carga de trabajo por colaborador</h2>
+
+                    <div class="grafico-tabla">
+
+                        <div>
+                            <div class="grafico">
+                                <div class="fila-barra">
+                                    <span>Camila</span>
+                                    <div class="pista"><div class="barra b95"></div></div>
+                                    <span>95 %</span>
+                                </div>
+                                <div class="fila-barra">
+                                    <span>Andrés</span>
+                                    <div class="pista"><div class="barra b88"></div></div>
+                                    <span>88 %</span>
+                                </div>
+                                <div class="fila-barra">
+                                    <span>Laura</span>
+                                    <div class="pista"><div class="barra b74"></div></div>
+                                    <span>74 %</span>
+                                </div>
+                                <div class="fila-barra">
+                                    <span>Diego</span>
+                                    <div class="pista"><div class="barra b100"></div></div>
+                                    <span>110 %</span>
+                                </div>
+                                <div class="fila-barra">
+                                    <span>Sofía</span>
+                                    <div class="pista"><div class="barra b60"></div></div>
+                                    <span>60 %</span>
+                                </div>
+                            </div>
+                            <p class="nota">La barra llega hasta el 100 %. Diego Vargas está en 110 %.</p>
+                        </div>
+
+                        <table>
+                            <caption>Proyectos, horas y capacidad usada por colaborador</caption>
+                            <thead>
+                            <tr>
+                                <th class="mayusculas" scope="col">Colaborador</th>
+                                <th class="mayusculas" scope="col">Proyectos</th>
+                                <th class="mayusculas" scope="col">Horas</th>
+                                <th class="mayusculas" scope="col">% de capacidad</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Camila Torres</td><td>3</td><td>152</td><td>95 %</td></tr>
+                                <tr><td>Andrés Méndez</td><td>2</td><td>140</td><td>88 %</td></tr>
+                                <tr><td>Laura Rojas</td><td>2</td><td>118</td><td>74 %</td></tr>
+                                <tr><td>Diego Vargas</td><td>4</td><td>176</td><td>⚠ 110 % (excedido)</td></tr>
+                                <tr><td>Sofía Jiménez</td><td>1</td><td>96</td><td>60 %</td></tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </section>
+
+                <section aria-labelledby="productividad-titulo">
+                    <h2 class="mayusculas" id="productividad-titulo">Productividad y utilización</h2>
+
+                    <div class="metricas">
+
+                        <article class="metrica">
+                            <h3 class="mayusculas">Tareas completadas</h3>
+                            <span class="valor">87 %</span>
+                            <p class="apoyo">+4 % frente a septiembre</p>
+                        </article>
+
+                        <article class="metrica">
+                            <h3 class="mayusculas">Utilización de recursos</h3>
+                            <span class="valor">92 %</span>
+                            <p class="apoyo">Meta: 85 %</p>
+                        </article>
+
+                        <article class="metrica">
+                            <h3 class="mayusculas">Promedio diario</h3>
+                            <span class="valor">6.8 h</span>
+                            <p class="apoyo">por colaborador</p>
+                        </article>
+
+                        <article class="metrica">
+                            <h3 class="mayusculas">Tareas bloqueadas</h3>
+                            <span class="valor">⚠ 4</span>
+                            <p class="apoyo">Requieren atención</p>
+                        </article>
+
+                    </div>
+                </section>
+
+            </main>
+
+            <footer class="pie-interno">
+                <p class="nota">© 2026 Rikimaka. Prototipo de clase con datos ilustrativos.</p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+</html>

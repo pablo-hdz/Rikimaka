@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- W04 · Registrar reporte diario -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro de las actividades, horas y estado de cada tarea del día.">
+    <meta name="author" content="Equipo Rikimaka">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <title>Reporte diario | Rikimaka</title>
+</head>
+
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <div class="layout">
+
+        <aside class="lateral">
+            <a class="logo" href="index.html">RIKIMAKA</a>
+            <p class="sublogo">Gestión humana</p>
+            <p class="rol mayusculas">Colaborador</p>
+
+            <nav class="menu-lateral" aria-label="Menú de colaborador">
+                <ul>
+                    <li><a href="colaborador.html"><img class="icono" src="../assets/img/iconos/inicio.png" alt="" width="24" height="24">Inicio</a></li>
+                    <li><a href="vacaciones.html"><img class="icono" src="../assets/img/iconos/vacaciones.png" alt="" width="24" height="24">Vacaciones</a></li>
+                    <li><a class="activo" href="reporte-diario.html" aria-current="page"><img class="icono" src="../assets/img/iconos/reporte.png" alt="" width="24" height="24">Reportes diarios</a></li>
+                    <li><a href="colaborador.html#proyectos"><img class="icono" src="../assets/img/iconos/proyectos.png" alt="" width="24" height="24">Mis proyectos</a></li>
+                    <li><a href="colaborador.html#notificaciones"><img class="icono" src="../assets/img/iconos/notificaciones.png" alt="" width="24" height="24">Notificaciones</a></li>
+                    <li><a href="ayuda.html"><img class="icono" src="../assets/img/iconos/ayuda.png" alt="" width="24" height="24">Ayuda y glosario</a></li>
+                    <li><a href="login.html"><img class="icono" src="../assets/img/iconos/salir.png" alt="" width="24" height="24">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="area">
+
+            <header class="cabecera">
+                <nav class="migas" aria-label="Ruta de navegación">
+                    <a href="colaborador.html">Inicio</a> ›
+                    <a href="historial.html">Reportes diarios</a> ›
+                    <span aria-current="page">Nuevo reporte</span>
+                </nav>
+
+                <div class="usuario">
+                    <a class="campana" href="colaborador.html#notificaciones"><img class="icono" src="../assets/img/iconos/notificaciones.png" alt="Ver notificaciones" width="24" height="24"></a>
+                    Camila Torres
+                    <span>Colaboradora · Desarrollo</span>
+                </div>
+            </header>
+
+            <main class="contenido" id="contenido">
+
+                <section aria-labelledby="reporte-titulo">
+                    <h1 class="mayusculas" id="reporte-titulo">Reporte diario</h1>
+                    <p class="descripcion">Registra cada actividad del día con sus horas y el estado final de la tarea.</p>
+                </section>
+
+                <section class="panel" aria-labelledby="actividades-titulo">
+                    <form action="confirmar-reporte.html" method="get">
+
+                        <div class="grupo campo-fecha">
+                            <label for="fecha-reporte">Fecha del reporte</label>
+                            <input id="fecha-reporte" name="fecha" type="date" value="2026-10-13" required>
+                        </div>
+
+                        <div class="entre">
+                            <h2 class="mayusculas" id="actividades-titulo">Actividades realizadas</h2>
+                            <span>3 actividades</span>
+                        </div>
+
+                        <table class="tabla-actividades">
+                            <caption>Actividades del reporte diario</caption>
+                            <thead>
+                            <tr>
+                                <th class="mayusculas" scope="col">Proyecto</th>
+                                <th class="mayusculas" scope="col">Actividad realizada</th>
+                                <th class="mayusculas" scope="col">Horas</th>
+                                <th class="mayusculas" scope="col">Estado</th>
+                                <th class="mayusculas" scope="col">Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label class="solo-lector" for="proyecto1">Proyecto de la actividad 1</label>
+                                        <select id="proyecto1" name="proyecto1">
+                                            <option selected>PRJ-014 Portal de clientes</option>
+                                            <option>PRJ-021 App de inventario</option>
+                                            <option>PRJ-009 Soporte interno</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label class="solo-lector" for="actividad1">Descripción de la actividad 1</label>
+                                        <input id="actividad1" name="actividad1" type="text" value="Maquetación del formulario de registro" required>
+                                    </td>
+                                    <td>
+                                        <label class="solo-lector" for="horas1">Horas de la actividad 1</label>
+                                        <input id="horas1" name="horas1" type="number" value="4" min="0.5" max="24" step="0.5" required>
+                                    </td>
+                                    <td>
+                                        <label class="solo-lector" for="estado1">Estado de la actividad 1</label>
+                                        <select id="estado1" name="estado1">
+                                            <option>○ Pendiente</option>
+                                            <option>◐ En progreso</option>
+                                            <option selected>● Completada</option>
+                                            <option>⊘ Bloqueada</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="secundario" disabled>Eliminar actividad 1</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="solo-lector" for="proyecto2">Proyecto de la actividad 2</label>
+                                        <select id="proyecto2" name="proyecto2">
+                                            <option>PRJ-014 Portal de clientes</option>
+                                            <option selected>PRJ-021 App de inventario</option>
+                                            <option>PRJ-009 Soporte interno</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label class="solo-lector" for="actividad2">Descripción de la actividad 2</label>
+                                        <input id="actividad2" name="actividad2" type="text" value="Revisión de requerimientos con el cliente" required>
+                                    </td>
+                                    <td>
+                                        <label class="solo-lector" for="horas2">Horas de la actividad 2</label>
+                                        <input id="horas2" name="horas2" type="number" value="3" min="0.5" max="24" step="0.5" required>
+                                    </td>
+                                    <td>
+                                        <label class="solo-lector" for="estado2">Estado de la actividad 2</label>
+                                        <select id="estado2" name="estado2">
+                                            <option>○ Pendiente</option>
+                                            <option selected>◐ En progreso</option>
+                                            <option>● Completada</option>
+                                            <option>⊘ Bloqueada</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="secundario" disabled>Eliminar actividad 2</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="solo-lector" for="proyecto3">Proyecto de la actividad 3</label>
+                                        <select id="proyecto3" name="proyecto3">
+                                            <option>PRJ-014 Portal de clientes</option>
+                                            <option>PRJ-021 App de inventario</option>
+                                            <option selected>PRJ-009 Soporte interno</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label class="solo-lector" for="actividad3">Descripción de la actividad 3</label>
+                                        <input id="actividad3" name="actividad3" type="text" value="Atención de incidencias" required>
+                                    </td>
+                                    <td>
+                                        <label class="solo-lector" for="horas3">Horas de la actividad 3</label>
+                                        <input id="horas3" name="horas3" type="number" value="1" min="0.5" max="24" step="0.5" required>
+                                    </td>
+                                    <td>
+                                        <label class="solo-lector" for="estado3">Estado de la actividad 3</label>
+                                        <select id="estado3" name="estado3">
+                                            <option selected>○ Pendiente</option>
+                                            <option>◐ En progreso</option>
+                                            <option>● Completada</option>
+                                            <option>⊘ Bloqueada</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="secundario" disabled>Eliminar actividad 3</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <button type="button" class="secundario" disabled>+ Agregar actividad</button>
+                        <p class="nota">Agregar, eliminar y guardar borrador no están disponibles en este prototipo.</p>
+
+                        <div class="entre">
+                            <div>
+                                <h3>Total del día: 8 h</h3>
+                                <p class="apoyo">Máximo permitido: 24 h por día.</p>
+                            </div>
+
+                            <div class="fila">
+                                <button type="button" class="secundario" disabled>Guardar borrador</button>
+                                <button type="submit">Revisar y enviar</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </section>
+
+                <section class="panel" aria-labelledby="estados-titulo">
+                    <h2 class="mayusculas" id="estados-titulo">Opciones de estado</h2>
+                    <ul class="leyenda-calendario">
+                        <li><span class="simbolo" aria-hidden="true">○</span> Pendiente</li>
+                        <li><span class="simbolo" aria-hidden="true">◐</span> En progreso</li>
+                        <li><span class="simbolo" aria-hidden="true">●</span> Completada</li>
+                        <li><span class="simbolo" aria-hidden="true">⊘</span> Bloqueada</li>
+                    </ul>
+                </section>
+
+            </main>
+
+            <footer class="pie-interno">
+                <p class="nota">© 2026 Rikimaka. Prototipo de clase con datos ilustrativos.</p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+</html>

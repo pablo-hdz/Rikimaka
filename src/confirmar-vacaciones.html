@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- W03b · Confirmar solicitud de vacaciones -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirmación de los datos de una solicitud de vacaciones antes de enviarla.">
+    <meta name="author" content="Equipo Rikimaka">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <title>Confirmar solicitud | Rikimaka</title>
+</head>
+
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <div class="layout">
+
+        <aside class="lateral">
+            <a class="logo" href="index.html">RIKIMAKA</a>
+            <p class="sublogo">Gestión humana</p>
+            <p class="rol mayusculas">Colaborador</p>
+
+            <nav class="menu-lateral" aria-label="Menú de colaborador">
+                <ul>
+                    <li><a href="colaborador.html"><img class="icono" src="../assets/img/iconos/inicio.png" alt="" width="24" height="24">Inicio</a></li>
+                    <li><a class="activo" href="vacaciones.html"><img class="icono" src="../assets/img/iconos/vacaciones.png" alt="" width="24" height="24">Vacaciones</a></li>
+                    <li><a href="reporte-diario.html"><img class="icono" src="../assets/img/iconos/reporte.png" alt="" width="24" height="24">Reportes diarios</a></li>
+                    <li><a href="colaborador.html#proyectos"><img class="icono" src="../assets/img/iconos/proyectos.png" alt="" width="24" height="24">Mis proyectos</a></li>
+                    <li><a href="colaborador.html#notificaciones"><img class="icono" src="../assets/img/iconos/notificaciones.png" alt="" width="24" height="24">Notificaciones</a></li>
+                    <li><a href="ayuda.html"><img class="icono" src="../assets/img/iconos/ayuda.png" alt="" width="24" height="24">Ayuda y glosario</a></li>
+                    <li><a href="login.html"><img class="icono" src="../assets/img/iconos/salir.png" alt="" width="24" height="24">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="area">
+
+            <header class="cabecera">
+                <nav class="migas" aria-label="Ruta de navegación">
+                    <a href="colaborador.html">Inicio</a> ›
+                    <a href="vacaciones.html">Nueva solicitud de vacaciones</a> ›
+                    <span aria-current="page">Confirmar</span>
+                </nav>
+
+                <div class="usuario">
+                    <a class="campana" href="colaborador.html#notificaciones"><img class="icono" src="../assets/img/iconos/notificaciones.png" alt="Ver notificaciones" width="24" height="24"></a>
+                    Camila Torres
+                    <span>Colaboradora · Desarrollo</span>
+                </div>
+            </header>
+
+            <main class="contenido" id="contenido">
+
+                <article class="confirmacion" aria-labelledby="confirmacion-titulo">
+
+                    <h1 class="mayusculas" id="confirmacion-titulo">Confirma tu solicitud</h1>
+                    <p class="descripcion">Revisa los datos antes de enviarla.</p>
+
+                    <table class="datos">
+                        <caption>Resumen de la solicitud de vacaciones</caption>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">Desde</th>
+                                <td>Lunes 19 de octubre de 2026</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Hasta</th>
+                                <td>Viernes 23 de octubre de 2026</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Días hábiles</th>
+                                <td>5</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Días restantes después</th>
+                                <td>7</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Comentario</th>
+                                <td>Viaje familiar</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>Podrás cancelar la solicitud mientras esté pendiente.</p>
+
+                    <div class="fila">
+                        <a class="boton" href="colaborador.html#solicitud-enviada">Enviar solicitud</a>
+                        <a class="boton secundario" href="vacaciones.html">Volver a editar</a>
+                    </div>
+
+                </article>
+
+            </main>
+
+            <footer class="pie-interno">
+                <p class="nota">© 2026 Rikimaka. Prototipo de clase con datos ilustrativos.</p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+</html>

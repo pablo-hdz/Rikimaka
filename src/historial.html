@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!-- W05 · Historial de reportes -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta de los reportes diarios enviados por el colaborador.">
+    <meta name="author" content="Equipo Rikimaka">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <title>Historial de reportes | Rikimaka</title>
+</head>
+
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <div class="layout">
+
+        <aside class="lateral">
+            <a class="logo" href="index.html">RIKIMAKA</a>
+            <p class="sublogo">Gestión humana</p>
+            <p class="rol mayusculas">Colaborador</p>
+
+            <nav class="menu-lateral" aria-label="Menú de colaborador">
+                <ul>
+                    <li><a href="colaborador.html"><img class="icono" src="../assets/img/iconos/inicio.png" alt="" width="24" height="24">Inicio</a></li>
+                    <li><a href="vacaciones.html"><img class="icono" src="../assets/img/iconos/vacaciones.png" alt="" width="24" height="24">Vacaciones</a></li>
+                    <li><a class="activo" href="historial.html" aria-current="page"><img class="icono" src="../assets/img/iconos/reporte.png" alt="" width="24" height="24">Reportes diarios</a></li>
+                    <li><a href="colaborador.html#proyectos"><img class="icono" src="../assets/img/iconos/proyectos.png" alt="" width="24" height="24">Mis proyectos</a></li>
+                    <li><a href="colaborador.html#notificaciones"><img class="icono" src="../assets/img/iconos/notificaciones.png" alt="" width="24" height="24">Notificaciones</a></li>
+                    <li><a href="ayuda.html"><img class="icono" src="../assets/img/iconos/ayuda.png" alt="" width="24" height="24">Ayuda y glosario</a></li>
+                    <li><a href="login.html"><img class="icono" src="../assets/img/iconos/salir.png" alt="" width="24" height="24">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="area">
+
+            <header class="cabecera">
+                <nav class="migas" aria-label="Ruta de navegación">
+                    <a href="colaborador.html">Inicio</a> ›
+                    <span aria-current="page">Reportes diarios</span>
+                </nav>
+
+                <div class="usuario">
+                    <a class="campana" href="colaborador.html#notificaciones"><img class="icono" src="../assets/img/iconos/notificaciones.png" alt="Ver notificaciones" width="24" height="24"></a>
+                    Camila Torres
+                    <span>Colaboradora · Desarrollo</span>
+                </div>
+            </header>
+
+            <main class="contenido" id="contenido">
+
+                <p class="mensaje" id="reporte-enviado" role="status">Reporte enviado.</p>
+
+                <section class="entre" aria-labelledby="historial-titulo">
+                    <div>
+                        <h1 class="mayusculas" id="historial-titulo">Mis reportes</h1>
+                        <p class="descripcion">Consulta y filtra los reportes diarios que has enviado.</p>
+                    </div>
+                    <a class="boton" href="reporte-diario.html">+ Nuevo reporte</a>
+                </section>
+
+                <section class="panel" aria-labelledby="filtros-titulo">
+                    <h2 class="mayusculas" id="filtros-titulo">Filtros</h2>
+
+                    <form action="historial.html" method="get">
+                        <div class="filtros">
+                            <div class="grupo">
+                                <label for="desde">Desde</label>
+                                <input id="desde" name="desde" type="date" value="2026-10-01">
+                            </div>
+                            <div class="grupo">
+                                <label for="hasta">Hasta</label>
+                                <input id="hasta" name="hasta" type="date" value="2026-10-13">
+                            </div>
+                            <div class="grupo">
+                                <label for="proyecto">Proyecto</label>
+                                <select id="proyecto" name="proyecto">
+                                    <option>Todos</option>
+                                    <option>PRJ-014</option>
+                                    <option>PRJ-021</option>
+                                    <option>PRJ-009</option>
+                                </select>
+                            </div>
+                            <div class="grupo">
+                                <label for="estado">Estado</label>
+                                <select id="estado" name="estado">
+                                    <option>Todos</option>
+                                    <option>Pendiente</option>
+                                    <option>En progreso</option>
+                                    <option>Completada</option>
+                                    <option>Bloqueada</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="fila">
+                            <button type="submit">Aplicar filtros</button>
+                            <button type="reset" class="secundario">Limpiar</button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="panel" aria-labelledby="tabla-historial-titulo">
+                    <h2 class="mayusculas" id="tabla-historial-titulo">Historial</h2>
+
+                    <table>
+                        <caption>Mostrando 8 de 42 reportes diarios. Página 1 de 6.</caption>
+                        <thead>
+                        <tr>
+                            <th class="mayusculas" scope="col">Fecha</th>
+                            <th class="mayusculas" scope="col">Proyectos</th>
+                            <th class="mayusculas" scope="col">Horas totales</th>
+                            <th class="mayusculas" scope="col">Tareas completadas</th>
+                            <th class="mayusculas" scope="col">Acciones</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12 oct. 2026</td>
+                                <td>PRJ-014, PRJ-021</td>
+                                <td>8 h</td>
+                                <td>4 de 5</td>
+                                <td>
+                                    <a href="#detalle0">Ver<span class="solo-lector"> reporte del 12 de octubre</span></a> ·
+                                    <a href="reporte-diario.html">Editar<span class="solo-lector"> reporte del 12 de octubre</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9 oct. 2026</td>
+                                <td>PRJ-014</td>
+                                <td>8 h</td>
+                                <td>3 de 3</td>
+                                <td>
+                                    <a href="#detalle1">Ver<span class="solo-lector"> reporte del 9 de octubre</span></a> ·
+                                    <a href="reporte-diario.html">Editar<span class="solo-lector"> reporte del 9 de octubre</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8 oct. 2026</td>
+                                <td>PRJ-014, PRJ-009</td>
+                                <td>7.5 h</td>
+                                <td>2 de 4</td>
+                                <td>
+                                    <a href="#detalle2">Ver<span class="solo-lector"> reporte del 8 de octubre</span></a> ·
+                                    <a href="reporte-diario.html">Editar<span class="solo-lector"> reporte del 8 de octubre</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7 oct. 2026</td>
+                                <td>PRJ-021</td>
+                                <td>8 h</td>
+                                <td>5 de 5</td>
+                                <td>
+                                    <a href="#detalle3">Ver<span class="solo-lector"> reporte del 7 de octubre</span></a> ·
+                                    <a href="reporte-diario.html">Editar<span class="solo-lector"> reporte del 7 de octubre</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6 oct. 2026</td>
+                                <td>PRJ-014, PRJ-021</td>
+                                <td>8 h</td>
+                                <td>3 de 4</td>
+                                <td>
+                                    <a href="#detalle4">Ver<span class="solo-lector"> reporte del 6 de octubre</span></a> ·
+                                    <a href="reporte-diario.html">Editar<span class="solo-lector"> reporte del 6 de octubre</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5 oct. 2026</td>
+                                <td>PRJ-009</td>
+                                <td>6 h</td>
+                                <td>2 de 2</td>
+                                <td>
+                                    <a href="#detalle5">Ver<span class="solo-lector"> reporte del 5 de octubre</span></a> ·
+                                    <a href="reporte-diario.html">Editar<span class="solo-lector"> reporte del 5 de octubre</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2 oct. 2026</td>
+                                <td>PRJ-014</td>
+                                <td>8 h</td>
+                                <td>4 de 4</td>
+                                <td>
+                                    <a href="#detalle6">Ver<span class="solo-lector"> reporte del 2 de octubre</span></a> ·
+                                    <a href="reporte-diario.html">Editar<span class="solo-lector"> reporte del 2 de octubre</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1 oct. 2026</td>
+                                <td>PRJ-021, PRJ-009</td>
+                                <td>8 h</td>
+                                <td>3 de 3</td>
+                                <td>
+                                    <a href="#detalle7">Ver<span class="solo-lector"> reporte del 1 de octubre</span></a> ·
+                                    <a href="reporte-diario.html">Editar<span class="solo-lector"> reporte del 1 de octubre</span></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <article class="panel" id="detalle0" aria-labelledby="detalle0-titulo">
+                    <h3 id="detalle0-titulo">Detalle del reporte del 12 de octubre</h3>
+                    <p>Proyectos: PRJ-014, PRJ-021. Horas: 8 h. Tareas completadas: 4 de 5.</p>
+                    <a href="#tabla-historial-titulo">Volver al historial</a>
+                </article>
+
+                <article class="panel" id="detalle1" aria-labelledby="detalle1-titulo">
+                    <h3 id="detalle1-titulo">Detalle del reporte del 9 de octubre</h3>
+                    <p>Proyectos: PRJ-014. Horas: 8 h. Tareas completadas: 3 de 3.</p>
+                    <a href="#tabla-historial-titulo">Volver al historial</a>
+                </article>
+
+                <article class="panel" id="detalle2" aria-labelledby="detalle2-titulo">
+                    <h3 id="detalle2-titulo">Detalle del reporte del 8 de octubre</h3>
+                    <p>Proyectos: PRJ-014, PRJ-009. Horas: 7.5 h. Tareas completadas: 2 de 4.</p>
+                    <a href="#tabla-historial-titulo">Volver al historial</a>
+                </article>
+
+                <article class="panel" id="detalle3" aria-labelledby="detalle3-titulo">
+                    <h3 id="detalle3-titulo">Detalle del reporte del 7 de octubre</h3>
+                    <p>Proyectos: PRJ-021. Horas: 8 h. Tareas completadas: 5 de 5.</p>
+                    <a href="#tabla-historial-titulo">Volver al historial</a>
+                </article>
+
+                <article class="panel" id="detalle4" aria-labelledby="detalle4-titulo">
+                    <h3 id="detalle4-titulo">Detalle del reporte del 6 de octubre</h3>
+                    <p>Proyectos: PRJ-014, PRJ-021. Horas: 8 h. Tareas completadas: 3 de 4.</p>
+                    <a href="#tabla-historial-titulo">Volver al historial</a>
+                </article>
+
+                <article class="panel" id="detalle5" aria-labelledby="detalle5-titulo">
+                    <h3 id="detalle5-titulo">Detalle del reporte del 5 de octubre</h3>
+                    <p>Proyectos: PRJ-009. Horas: 6 h. Tareas completadas: 2 de 2.</p>
+                    <a href="#tabla-historial-titulo">Volver al historial</a>
+                </article>
+
+                <article class="panel" id="detalle6" aria-labelledby="detalle6-titulo">
+                    <h3 id="detalle6-titulo">Detalle del reporte del 2 de octubre</h3>
+                    <p>Proyectos: PRJ-014. Horas: 8 h. Tareas completadas: 4 de 4.</p>
+                    <a href="#tabla-historial-titulo">Volver al historial</a>
+                </article>
+
+                <article class="panel" id="detalle7" aria-labelledby="detalle7-titulo">
+                    <h3 id="detalle7-titulo">Detalle del reporte del 1 de octubre</h3>
+                    <p>Proyectos: PRJ-021, PRJ-009. Horas: 8 h. Tareas completadas: 3 de 3.</p>
+                    <a href="#tabla-historial-titulo">Volver al historial</a>
+                </article>
+
+            </main>
+
+            <footer class="pie-interno">
+                <p class="nota">© 2026 Rikimaka. Prototipo de clase con datos ilustrativos.</p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+</html>

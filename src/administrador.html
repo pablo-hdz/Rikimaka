@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!-- W06 · Panel administrativo -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panel de talento humano: solicitudes pendientes e indicadores clave del personal.">
+    <meta name="author" content="Equipo Rikimaka">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <title>Panel administrativo | Rikimaka</title>
+</head>
+
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <div class="layout">
+
+        <aside class="lateral">
+            <a class="logo" href="index.html">RIKIMAKA</a>
+            <p class="sublogo">Gestión humana</p>
+            <p class="rol mayusculas">Talento humano</p>
+
+            <nav class="menu-lateral" aria-label="Menú de talento humano">
+                <ul>
+                    <li><a class="activo" href="administrador.html" aria-current="page"><img class="icono" src="../assets/img/iconos/inicio.png" alt="" width="24" height="24">Inicio</a></li>
+                    <li><a href="solicitudes.html"><img class="icono" src="../assets/img/iconos/solicitudes.png" alt="" width="24" height="24">Solicitudes · 5</a></li>
+                    <li><a href="calendario.html"><img class="icono" src="../assets/img/iconos/calendario.png" alt="" width="24" height="24">Calendario laboral</a></li>
+                    <li><a href="estadisticas.html"><img class="icono" src="../assets/img/iconos/estadisticas.png" alt="" width="24" height="24">Estadísticas</a></li>
+                    <li><a href="administrador.html#colaboradores"><img class="icono" src="../assets/img/iconos/colaboradores.png" alt="" width="24" height="24">Colaboradores</a></li>
+                    <li><a href="ayuda.html"><img class="icono" src="../assets/img/iconos/ayuda.png" alt="" width="24" height="24">Ayuda y glosario</a></li>
+                    <li><a href="login.html"><img class="icono" src="../assets/img/iconos/salir.png" alt="" width="24" height="24">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="area">
+
+            <header class="cabecera">
+                <nav class="migas" aria-label="Ruta de navegación">
+                    <span aria-current="page">Inicio</span>
+                </nav>
+
+                <div class="usuario">
+                    María Fernanda Ruiz
+                    <span>Administradora de talento humano</span>
+                </div>
+            </header>
+
+            <main class="contenido" id="contenido">
+
+                <section aria-labelledby="panel-titulo">
+                    <h1 class="mayusculas" id="panel-titulo">Panel de talento humano</h1>
+                    <p>Buen día, María. Esto es lo que sucede con tu equipo hoy.</p>
+                    <p class="descripcion">Martes 13 de octubre de 2026</p>
+                </section>
+
+                <section class="metricas" aria-label="Indicadores del panel">
+
+                    <article class="metrica">
+                        <h2 class="mayusculas">Solicitudes pendientes</h2>
+                        <span class="valor">5</span>
+                        <p class="apoyo">2 inician esta semana</p>
+                    </article>
+
+                    <article class="metrica">
+                        <h2 class="mayusculas">Colaboradores activos</h2>
+                        <span class="valor">120</span>
+                        <p class="apoyo">4 ingresos este mes</p>
+                    </article>
+
+                    <article class="metrica">
+                        <h2 class="mayusculas">Proyectos activos</h2>
+                        <span class="valor">35</span>
+                        <p class="apoyo">3 sobre presupuesto</p>
+                    </article>
+
+                    <article class="metrica">
+                        <h2 class="mayusculas">Horas reportadas</h2>
+                        <span class="valor">4 280 h</span>
+                        <p class="apoyo">Octubre 2026</p>
+                    </article>
+
+                </section>
+
+                <div class="dos-columnas">
+
+                    <section class="panel" aria-labelledby="grafico-titulo">
+                        <h2 class="mayusculas" id="grafico-titulo">Horas por proyecto vs. presupuesto</h2>
+
+                        <div class="grafico">
+                            <div class="fila-barra">
+                                <span>PRJ-014</span>
+                                <div class="pista"><div class="barra b90"></div></div>
+                                <span>452 h</span>
+                            </div>
+                            <div class="fila-barra">
+                                <span>PRJ-021</span>
+                                <div class="pista"><div class="barra b42"></div></div>
+                                <span>210 h</span>
+                            </div>
+                            <div class="fila-barra">
+                                <span>PRJ-009</span>
+                                <div class="pista"><div class="barra b48"></div></div>
+                                <span>238 h</span>
+                            </div>
+                            <div class="fila-barra">
+                                <span>PRJ-030</span>
+                                <div class="pista"><div class="barra b52"></div></div>
+                                <span>260 h</span>
+                            </div>
+                            <div class="fila-barra">
+                                <span>PRJ-018</span>
+                                <div class="pista"><div class="barra b62"></div></div>
+                                <span>310 h</span>
+                            </div>
+                        </div>
+
+                        <p class="nota">Horas reales sobre una escala de 500 h. El presupuesto está en la tabla de datos.</p>
+                        <a href="estadisticas.html#eficiencia">Ver tabla de datos</a>
+                    </section>
+
+                    <section class="panel" aria-labelledby="accesos-titulo">
+                        <h2 class="mayusculas" id="accesos-titulo">Accesos rápidos</h2>
+
+                        <a class="boton ancho" href="solicitudes.html">Revisar solicitudes</a>
+                        <a class="boton secundario ancho" href="calendario.html">Gestionar feriados</a>
+                        <a class="boton secundario ancho" href="estadisticas.html">Ver estadísticas</a>
+
+                        <h3>Próximo feriado</h3>
+                        <p>1 de diciembre · Día de la Abolición del Ejército</p>
+                    </section>
+
+                </div>
+
+                <section class="panel" aria-labelledby="solicitudes-titulo">
+                    <div class="entre">
+                        <h2 class="mayusculas" id="solicitudes-titulo">Solicitudes por revisar · 5 pendientes</h2>
+                        <a href="solicitudes.html">Ver todas las solicitudes</a>
+                    </div>
+
+                    <table>
+                        <caption>Las 3 solicitudes de vacaciones enviadas más recientemente</caption>
+                        <thead>
+                        <tr>
+                            <th class="mayusculas" scope="col">Colaborador</th>
+                            <th class="mayusculas" scope="col">Fechas</th>
+                            <th class="mayusculas" scope="col">Días hábiles</th>
+                            <th class="mayusculas" scope="col">Enviada el</th>
+                            <th class="mayusculas" scope="col">Acción</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Camila Torres
+                                    <span class="dato-secundario">Desarrollo</span>
+                                </td>
+                                <td>19 oct. – 23 oct.</td>
+                                <td>5</td>
+                                <td>13 oct.</td>
+                                <td><a href="solicitudes.html#solicitud0">Revisar<span class="solo-lector"> solicitud de Camila Torres</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Andrés Méndez
+                                    <span class="dato-secundario">Soporte</span>
+                                </td>
+                                <td>2 nov. – 6 nov.</td>
+                                <td>5</td>
+                                <td>11 oct.</td>
+                                <td><a href="solicitudes.html#solicitud1">Revisar<span class="solo-lector"> solicitud de Andrés Méndez</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Laura Rojas
+                                    <span class="dato-secundario">Diseño</span>
+                                </td>
+                                <td>26 oct. – 27 oct.</td>
+                                <td>2</td>
+                                <td>10 oct.</td>
+                                <td><a href="solicitudes.html#solicitud2">Revisar<span class="solo-lector"> solicitud de Laura Rojas</span></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="panel" id="colaboradores" aria-labelledby="colaboradores-titulo">
+                    <h2 class="mayusculas" id="colaboradores-titulo">Colaboradores</h2>
+
+                    <table>
+                        <caption>Colaboradores con solicitudes pendientes</caption>
+                        <thead>
+                        <tr>
+                            <th class="mayusculas" scope="col">Persona</th>
+                            <th class="mayusculas" scope="col">Área</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Camila Torres</td><td>Desarrollo</td></tr>
+                            <tr><td>Andrés Méndez</td><td>Soporte</td></tr>
+                            <tr><td>Laura Rojas</td><td>Diseño</td></tr>
+                            <tr><td>Diego Vargas</td><td>Desarrollo</td></tr>
+                            <tr><td>Sofía Jiménez</td><td>Finanzas</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+            </main>
+
+            <footer class="pie-interno">
+                <p class="nota">© 2026 Rikimaka. Prototipo de clase con datos ilustrativos.</p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+</html>

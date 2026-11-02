@@ -1,1 +1,814 @@
+/* ========================================
+   ELEMENTOS GENERALES
+   ======================================== */
 
+.logo {
+    display: block;
+    font-family: var(--letra-titulos);
+    font-size: 1.5625rem;
+    font-weight: bold;
+    padding: 0.25rem 0;
+    color: var(--color-texto);
+    text-decoration: none;
+}
+
+.sublogo {
+    font-size: 0.875rem;
+    color: var(--color-suave);
+    margin-bottom: 1.5rem;
+}
+
+.rol {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--color-suave);
+    margin-bottom: 1rem;
+}
+
+.menu-lateral ul {
+    list-style: none;
+}
+
+.menu-lateral a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    color: var(--color-texto);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.menu-lateral a:hover {
+    background-color: var(--color-fondo);
+    text-decoration: underline;
+}
+
+.menu-lateral .activo {
+    background-color: var(--color-marca);
+    color: var(--color-blanco);
+}
+
+.menu-lateral a:focus {
+    background-color: var(--color-foco);
+    color: var(--color-texto);
+}
+
+/* El ícono negro pasa a blanco sobre el fondo de la opción activa */
+.menu-lateral .activo .icono {
+    filter: invert(1);
+}
+
+.menu-lateral .activo:focus .icono {
+    filter: none;
+}
+
+.usuario {
+    font-size: 1rem;
+    text-align: right;
+}
+
+.usuario span {
+    display: block;
+    color: var(--color-suave);
+    font-size: 0.875rem;
+}
+
+.campana {
+    display: inline-block;
+    padding: 0.625rem;
+}
+
+.campana .icono {
+    display: block;
+}
+
+.migas {
+    font-size: 0.875rem;
+    color: var(--color-suave);
+}
+
+.descripcion {
+    color: var(--color-suave);
+    margin-bottom: 1.5rem;
+}
+
+.nota {
+    font-size: 0.875rem;
+    color: var(--color-suave);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pie-interno .nota {
+    margin: 0;
+}
+
+/* Íconos de Flaticon: tamaño fijo para que no se deformen */
+.icono {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* ========================================
+   PANELES Y MÉTRICAS
+   ======================================== */
+
+.panel {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    /* Una tabla ancha se desplaza dentro del panel, no toda la página.
+       position: relative mantiene adentro el texto para lectores de pantalla. */
+    position: relative;
+    overflow-x: auto;
+}
+
+.metrica {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    padding: 1.25rem;
+}
+
+.metrica h2,
+.metrica h3 {
+    font-size: 0.875rem;
+    color: var(--color-suave);
+    margin-bottom: 0.75rem;
+}
+
+.valor {
+    display: block;
+    font-family: var(--letra-titulos);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.apoyo {
+    color: var(--color-suave);
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   BOTONES
+   ======================================== */
+
+.boton,
+button {
+    display: inline-block;
+    background-color: var(--color-marca);
+    color: var(--color-blanco);
+    border: 2px solid var(--color-marca);
+    border-radius: 4px;
+    padding: 0.75rem 1.25rem;
+    font-family: var(--letra-texto);
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.secundario {
+    background-color: var(--color-blanco);
+    color: var(--color-marca);
+}
+
+.boton:hover,
+button:hover {
+    background-color: var(--color-oscuro);
+    border-color: var(--color-oscuro);
+    color: var(--color-blanco);
+}
+
+button:disabled {
+    background-color: var(--color-fondo);
+    border-color: var(--color-control);
+    color: var(--color-suave);
+    font-weight: normal;
+    cursor: not-allowed;
+}
+
+.ancho {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.grande {
+    padding: 1.5rem;
+}
+
+/* Enlaces sueltos en paneles: área táctil de al menos 44 px */
+.panel > a:not(.boton),
+.entre > a:not(.boton, .historial-boton) {
+    display: inline-block;
+    padding: 0.5625rem 0;
+}
+
+.historial-boton {
+    display: inline-block;
+    padding: 0.75rem;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-oscuro);
+    border-radius: 4px;
+    color: var(--color-texto);
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.historial-boton:hover {
+    background-color: var(--color-fondo);
+}
+
+/* ========================================
+   AVISOS Y FORMULARIOS
+   ======================================== */
+
+.aviso {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--color-fondo-suave);
+    border-left: 4px solid var(--color-marca);
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 1.25rem 0;
+}
+
+.grupo {
+    margin-bottom: 1.25rem;
+}
+
+.campo-fecha {
+    max-width: 16rem;
+}
+
+/* Mensajes y confirmaciones: se muestran al llegar por su enlace (:target) */
+
+.mensaje {
+    display: none;
+    background-color: var(--color-fondo-suave);
+    border-left: 4px solid var(--color-marca);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.decision {
+    display: none;
+    border: 2px solid var(--color-marca);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 1.25rem;
+}
+
+.mensaje:target,
+.decision:target {
+    display: block;
+}
+
+.ayuda {
+    color: var(--color-suave);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* ========================================
+   TABLAS
+   ======================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+caption {
+    color: var(--color-suave);
+    font-size: 0.875rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+th {
+    text-align: left;
+    font-size: 0.875rem;
+    background-color: var(--color-fondo);
+    color: var(--color-suave);
+    padding: 0.75rem 0.5rem;
+}
+
+td {
+    font-size: 1rem;
+    padding: 0.875rem 0.5rem;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+/* Enlaces dentro de tablas: área táctil cómoda */
+td a {
+    display: inline-block;
+    min-width: 2.75rem;
+    padding: 0.625rem 0;
+}
+
+.dato-secundario {
+    display: block;
+    color: var(--color-suave);
+    font-size: 0.875rem;
+}
+
+/* Formulario en tabla: se desplaza dentro del panel en pantallas pequeñas */
+.tabla-actividades {
+    min-width: 56rem;
+}
+
+/* Filas con su encabezado a la izquierda */
+
+.datos th {
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.75rem 0.25rem;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.datos td {
+    padding: 0.75rem 0.25rem;
+    font-weight: bold;
+}
+
+/* ========================================
+   NOTIFICACIONES
+   ======================================== */
+
+.notificaciones {
+    list-style: none;
+}
+
+.notificacion {
+    border-bottom: 1px solid var(--color-borde);
+    padding: 0.75rem 0;
+}
+
+.notificacion p {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+/* ========================================
+   PESTAÑAS
+   ======================================== */
+
+.pestanas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.pestanas a {
+    display: inline-block;
+    padding: 0.625rem 0;
+}
+
+.pestana-activa {
+    font-weight: bold;
+    border-bottom: 3px solid var(--color-marca);
+}
+
+/* ========================================
+   CALENDARIO DE VACACIONES
+   Cada estado lleva símbolo: nunca depende solo del color
+   ======================================== */
+
+.calendario {
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 3px;
+}
+
+.calendario th {
+    padding: 0.375rem 0.125rem;
+    text-align: center;
+}
+
+.calendario td {
+    position: relative;
+    height: 3.25rem;
+    padding: 0.25rem 0.375rem;
+    vertical-align: top;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-blanco);
+}
+
+.calendario .vacio {
+    border: 0;
+    background-color: transparent;
+}
+
+.simbolo {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.2;
+}
+
+.calendario .seleccionado {
+    background-color: var(--color-oscuro);
+    border-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+.calendario .fin-semana {
+    background-color: var(--color-fondo-suave);
+    color: var(--color-suave);
+}
+
+.calendario .feriado {
+    border: 2px solid var(--color-texto);
+    font-weight: bold;
+}
+
+.calendario .periodo-permitido {
+    background-color: var(--color-resalte);
+}
+
+.leyenda-calendario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    list-style: none;
+    font-size: 0.875rem;
+}
+
+.leyenda-calendario .simbolo {
+    display: inline;
+    font-weight: bold;
+}
+
+/* ========================================
+   BLOQUES DE CONFIRMACIÓN Y RESUMEN
+   ======================================== */
+
+.confirmacion {
+    width: 80%;
+    background-color: var(--color-blanco);
+    border: 2px solid var(--color-marca);
+    border-radius: 6px;
+    padding: 2rem;
+    margin: 1.5rem auto;
+    position: relative;
+    overflow-x: auto;
+}
+
+/* ========================================
+   GRÁFICOS
+   ======================================== */
+
+.grafico {
+    background-color: var(--color-fondo);
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.fila-barra {
+    display: grid;
+    grid-template-columns: 5.625rem 1fr 3rem;
+    gap: 0.75rem;
+    margin-bottom: 1.125rem;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.pista {
+    background-color: var(--color-borde);
+    height: 1.125rem;
+}
+
+.barra {
+    background-color: var(--color-marca);
+    height: 1.125rem;
+}
+
+.b42 { width: 42%; }
+.b48 { width: 48%; }
+.b52 { width: 52%; }
+.b60 { width: 60%; }
+.b62 { width: 62%; }
+.b74 { width: 74%; }
+.b88 { width: 88%; }
+.b90 { width: 90%; }
+.b95 { width: 95%; }
+.b100 { width: 100%; }
+
+/* ========================================
+   PÁGINA DE INICIO Y AYUDA
+   ======================================== */
+
+.inicio {
+    background-color: var(--color-blanco);
+}
+
+.inicio h1 {
+    font-size: 3.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.inicio h2 {
+    font-size: 1.375rem;
+    margin-bottom: 1.5rem;
+}
+
+.inicio-logo {
+    display: block;
+    font-family: var(--letra-titulos);
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: 0.125rem 0;
+    color: var(--color-texto);
+    text-decoration: none;
+}
+
+.inicio-menu a:not(.inicio-boton) {
+    min-width: 2.75rem;
+}
+
+.inicio-menu a:not(.inicio-boton),
+.inicio-titulo-fila a,
+.inicio-acceso a:not(.inicio-boton) {
+    display: inline-block;
+    padding: 0.5625rem 0;
+}
+
+.inicio-cabecera p {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+.inicio-boton {
+    display: inline-block;
+    background-color: var(--color-marca);
+    color: var(--color-blanco);
+    border: 2px solid var(--color-marca);
+    border-radius: 4px;
+    padding: 0.75rem 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.inicio-boton:hover {
+    background-color: var(--color-oscuro);
+    border-color: var(--color-oscuro);
+    color: var(--color-blanco);
+}
+
+.inicio-secundario {
+    background-color: var(--color-blanco);
+    color: var(--color-marca);
+}
+
+.inicio-ancho {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.inicio-acceso {
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    border-radius: 4px;
+    padding: 2rem;
+}
+
+.inicio-acceso a:not(.inicio-boton) {
+    color: var(--color-texto);
+}
+
+.inicio-cifras span {
+    display: block;
+    font-family: var(--letra-titulos);
+    font-size: 2.625rem;
+    font-weight: bold;
+}
+
+.inicio-cifras p {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+.inicio-tarjeta {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    padding: 1.5rem;
+}
+
+.inicio-foto {
+    display: block;
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    background-color: var(--color-fondo-suave);
+    margin-bottom: 1.5rem;
+}
+
+.inicio-beneficio {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-weight: bold;
+}
+
+.inicio-pie a {
+    display: inline-block;
+    padding: 0.5625rem 0;
+    color: var(--color-blanco);
+}
+
+.inicio-pie a:focus {
+    color: var(--color-texto);
+}
+
+.inicio-pie ul {
+    list-style: none;
+}
+
+/* Contenido de la página de ayuda */
+
+.ayuda-seccion {
+    margin-bottom: 3rem;
+    max-width: 50rem;
+}
+
+.ayuda-seccion ul {
+    margin-left: 1.5rem;
+}
+
+.ayuda-seccion li {
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   PANTALLA DE INGRESO
+   ======================================== */
+
+.ingreso-foto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Capa oscura: mantiene el texto blanco por encima de 7:1 */
+.ingreso-capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 20, 25, 0.75);
+}
+
+.ingreso-volver {
+    position: relative;
+    display: inline-block;
+    padding: 0.625rem 0;
+    color: var(--color-blanco);
+    font-size: 1rem;
+}
+
+.ingreso-mensaje {
+    position: absolute;
+    bottom: 12%;
+    left: 8%;
+    right: 8%;
+    color: var(--color-blanco);
+}
+
+.ingreso-mensaje h1 {
+    font-size: 2.625rem;
+    margin-bottom: 1.25rem;
+}
+
+.ingreso-encabezado {
+    margin-bottom: 2rem;
+}
+
+.ingreso-encabezado .logo {
+    font-size: 1.875rem;
+}
+
+.ingreso-encabezado .sublogo {
+    margin-bottom: 0;
+}
+
+.ingreso-contenido h2 {
+    font-size: 1.625rem;
+    margin-bottom: 0.75rem;
+}
+
+.ingreso-contenido > p {
+    color: var(--color-suave);
+}
+
+.formulario-acceso {
+    margin-top: 1.5rem;
+}
+
+.ingreso-enlaces {
+    text-align: right;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.ingreso-enlaces a,
+.ingreso-ayuda a {
+    display: inline-block;
+    padding: 0.625rem 0;
+    color: var(--color-texto);
+}
+
+.ingreso-opciones > p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.ingreso-ayuda {
+    border-top: 1px solid var(--color-borde);
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* ========================================
+   TABLETA Y TELÉFONO
+   ======================================== */
+
+@media screen and (max-width: 900px) {
+
+    .menu-lateral ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    .menu-lateral a {
+        margin-bottom: 0;
+    }
+
+    .sublogo {
+        margin-bottom: 0.75rem;
+    }
+
+    .confirmacion {
+        width: 100%;
+    }
+
+    .inicio h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    h1,
+    .inicio h1,
+    .ingreso-mensaje h1 {
+        font-size: 1.875rem;
+    }
+
+    .panel,
+    .confirmacion {
+        padding: 1rem;
+    }
+
+    .usuario {
+        text-align: left;
+    }
+
+    .calendario td {
+        height: 2.75rem;
+        padding: 0.125rem;
+    }
+
+    .fila-barra {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+}

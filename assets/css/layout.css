@@ -1,1 +1,604 @@
+/* ========================================
+   SISTEMA INTERNO: menú lateral y contenido
+   ======================================== */
 
+.layout {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    min-height: 100vh;
+}
+
+.lateral {
+    background-color: var(--color-blanco);
+    border-right: 1px solid var(--color-borde);
+    padding: 2rem 1.5rem;
+}
+
+/* min-width: 0 permite que una tabla ancha no empuje toda la página */
+
+.area,
+.metricas > *,
+.dos-columnas > *,
+.solicitudes-columnas > *,
+.grafico-tabla > * {
+    min-width: 0;
+}
+
+.area {
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--color-blanco);
+    border-bottom: 1px solid var(--color-borde);
+    padding: 1.375rem 2.5rem;
+}
+
+.contenido {
+    flex: 1;
+    padding: 2rem 2.5rem;
+}
+
+.pie-interno {
+    padding: 1.25rem 2.5rem;
+    border-top: 1px solid var(--color-borde);
+}
+
+/* ========================================
+   MÉTRICAS, COLUMNAS Y FILAS
+   ======================================== */
+
+.metricas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.75rem 0;
+}
+
+.dos-columnas {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.solicitudes-columnas,
+.grafico-tabla {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 1.5rem;
+}
+
+.iguales {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.entre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.filtros {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+/* ========================================
+   PÁGINA DE INICIO Y AYUDA
+   ======================================== */
+
+.inicio-cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem 5rem;
+    background-color: var(--color-blanco);
+}
+
+.inicio-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    align-items: center;
+    list-style: none;
+}
+
+.inicio-hero {
+    position: relative;
+    background-color: var(--color-oscuro);
+    background-image: url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1600");
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 4rem;
+}
+
+/* Tres videos apilados: cada uno aparece 8 segundos de un ciclo de 24 */
+
+.inicio-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: alternar-videos 24s infinite;
+}
+
+.inicio-video:nth-child(2) {
+    animation-delay: 8s;
+}
+
+.inicio-video:nth-child(3) {
+    animation-delay: 16s;
+}
+
+@keyframes alternar-videos {
+    0% { opacity: 0; }
+    4% { opacity: 1; }
+    33% { opacity: 1; }
+    37% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Al marcar la casilla se ocultan los videos y queda la imagen de fondo */
+
+.video-casilla:checked ~ .inicio-videos {
+    display: none;
+}
+
+.video-casilla {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 5rem;
+    z-index: 1;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.video-casilla:focus {
+    outline-color: var(--color-blanco);
+}
+
+.video-etiqueta {
+    position: absolute;
+    bottom: 1rem;
+    left: 7rem;
+    z-index: 1;
+    margin: 0;
+    padding: 0.625rem 0;
+    color: var(--color-blanco);
+    cursor: pointer;
+}
+
+/* La capa cubre todo el fondo: mantiene el texto blanco por encima de 7:1 */
+
+.inicio-capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.66);
+}
+
+.inicio-hero-contenido {
+    position: relative;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 6rem;
+    align-items: center;
+    min-height: 40rem;
+    padding: 5rem;
+    color: var(--color-blanco);
+}
+
+.inicio-cifras {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    padding: 3rem 5rem;
+    background-color: var(--color-fondo);
+}
+
+.inicio-informacion {
+    padding: 3.5rem 5rem;
+}
+
+.inicio-titulo-fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.inicio-roles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.inicio-beneficios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2.5rem;
+    background-color: var(--color-fondo);
+    list-style: none;
+}
+
+.inicio-pie {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem 5rem;
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+}
+
+/* ========================================
+   PANTALLA DE INGRESO
+   ======================================== */
+
+.ingreso-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.ingreso-imagen {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 3rem 8%;
+    background-color: var(--color-oscuro);
+}
+
+.ingreso-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 12%;
+    background-color: var(--color-blanco);
+}
+
+.ingreso-contenido {
+    width: 100%;
+    max-width: 27.5rem;
+}
+
+/* ========================================
+   TABLETA: el menú lateral pasa arriba
+   ======================================== */
+
+@media screen and (max-width: 900px) {
+
+    .layout {
+        display: block;
+    }
+
+    .lateral {
+        border-right: 0;
+        border-bottom: 1px solid var(--color-borde);
+        padding: 1rem 1.25rem;
+    }
+
+    .cabecera {
+        flex-wrap: wrap;
+        padding: 1rem 1.25rem;
+    }
+
+    .contenido {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .pie-interno {
+        padding: 1rem 1.25rem;
+    }
+
+    .metricas {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dos-columnas,
+    .solicitudes-columnas,
+    .grafico-tabla,
+    .iguales {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .inicio-cabecera {
+        padding: 1rem 1.5rem;
+    }
+
+    .video-casilla {
+        left: 1.5rem;
+    }
+
+    .video-etiqueta {
+        left: 3.5rem;
+    }
+
+    .inicio-hero-contenido {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        min-height: 0;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .inicio-informacion {
+        padding: 2rem 1.5rem;
+    }
+
+    .inicio-cifras {
+        padding: 2rem 1.5rem;
+    }
+
+    .inicio-roles {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .inicio-beneficios {
+        grid-template-columns: 1fr 1fr;
+        padding: 1.5rem;
+    }
+
+    .inicio-pie {
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem 1.5rem;
+    }
+
+    .ingreso-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .ingreso-imagen {
+        min-height: 21.875rem;
+    }
+
+    .ingreso-formulario {
+        padding: 3rem 8%;
+    }
+
+    .ingreso-contenido {
+        max-width: 100%;
+    }
+}
+
+/* ========================================
+   TELÉFONO
+   ======================================== */
+
+@media screen and (max-width: 480px) {
+
+    .metricas,
+    .filtros,
+    .inicio-cifras,
+    .inicio-roles,
+    .inicio-beneficios,
+    .inicio-pie {
+        grid-template-columns: 1fr;
+    }
+
+    .ingreso-imagen {
+        min-height: 17.5rem;
+        padding: 2rem 8%;
+    }
+
+    .ingreso-formulario {
+        padding: 2.25rem 7%;
+    }
+}
+
+/* ========================================
+   MENÚ DESPLEGABLE DEL COLABORADOR
+   ======================================== */
+
+/* Casilla para controlar el menú */
+
+.menu-casilla {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+/* Menú cerrado inicialmente */
+
+.layout-colaborador {
+    grid-template-columns: 1fr;
+}
+
+.layout-colaborador .lateral {
+    display: none;
+}
+
+/* Botón del menú */
+
+.layout-colaborador .boton-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--color-marca);
+    color: var(--color-blanco);
+    border-radius: 4px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Menú abierto */
+
+.menu-casilla:checked + .layout-colaborador {
+    grid-template-columns: 15rem 1fr;
+}
+
+.menu-casilla:checked + .layout-colaborador .lateral {
+    display: block;
+}
+
+/* Foco del botón */
+
+.menu-casilla:focus + .layout-colaborador .boton-menu {
+    outline: 3px solid var(--color-foco);
+}
+
+/* ========================================
+   CABECERA DEL COLABORADOR
+   ======================================== */
+
+/* Botón e Inicio juntos */
+
+.cabecera-colaborador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cabecera-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cabecera-colaborador .migas {
+    margin: 0;
+}
+
+/* ========================================
+   CAMPANA Y DATOS DEL COLABORADOR
+   ======================================== */
+
+/* Campana y datos en una misma fila */
+
+.cabecera-colaborador .usuario-colaborador {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-left: auto;
+    text-align: right;
+}
+
+/* Campana */
+
+.cabecera-colaborador .usuario-colaborador .campana {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+/* Nombre y cargo */
+
+.cabecera-colaborador .usuario-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cabecera-colaborador .usuario-datos p {
+    margin: 0;
+}
+
+.cabecera-colaborador .usuario-datos span {
+    display: block;
+    margin: 0;
+}
+
+/* ========================================
+   MENÚ RESPONSIVE DEL COLABORADOR
+   ======================================== */
+
+@media screen and (max-width: 900px) {
+
+    .layout-colaborador,
+    .menu-casilla:checked + .layout-colaborador {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .layout-colaborador .area {
+        display: contents;
+    }
+
+    .layout-colaborador .cabecera {
+        order: 0;
+    }
+
+    .layout-colaborador .lateral {
+        order: 1;
+    }
+
+    .layout-colaborador .contenido {
+        order: 2;
+    }
+
+    .layout-colaborador .pie-interno {
+        order: 3;
+    }
+}
+
+/* ========================================
+   AJUSTES PARA CELULARES
+   ======================================== */
+
+@media screen and (max-width: 480px) {
+
+    .cabecera-colaborador {
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+    }
+
+    .cabecera-izquierda {
+        gap: 0.5rem;
+    }
+
+    .cabecera-colaborador .boton-menu {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .cabecera-colaborador .usuario-colaborador {
+        gap: 0.5rem;
+    }
+
+    .cabecera-colaborador .usuario-datos {
+        font-size: 0.875rem;
+    }
+}

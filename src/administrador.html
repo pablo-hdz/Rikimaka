@@ -19,7 +19,10 @@
 
     <a class="saltar" href="#contenido">Saltar al contenido principal</a>
 
-    <div class="layout">
+    <!-- Casilla para abrir y cerrar el menú -->
+    <input type="checkbox" id="menu-administrador" class="menu-casilla">
+
+    <div class="layout layout-colaborador">
 
         <aside class="lateral">
             <a class="logo" href="index.html">RIKIMAKA</a>
@@ -41,10 +44,15 @@
 
         <div class="area">
 
-            <header class="cabecera">
-                <nav class="migas" aria-label="Ruta de navegación">
-                    <span aria-current="page">Inicio</span>
-                </nav>
+            <header class="cabecera cabecera-colaborador">
+                <div class="cabecera-izquierda">
+                    <label for="menu-administrador" class="boton-menu">
+                        &#9776;
+                    </label>
+                    <nav class="migas" aria-label="Ruta de navegación">
+                        <span aria-current="page">Inicio</span>
+                    </nav>
+                </div>
 
                 <div class="usuario">
                     María Fernanda Ruiz
